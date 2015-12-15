@@ -57,6 +57,7 @@ def pie_chart(col_fracs, col_lab, size = (20,8)):
     generate a pie chart
     :param col_fracs: variable value counts to show on pie chart
     :param col_lab: each slice label
+    :param size: figsize
     :return: pie chart
     '''
     temp_df = pd.crosstab(col_lab, col_fracs, dropna=False)
