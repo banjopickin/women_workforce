@@ -4,7 +4,7 @@
       year     1 - 11
       id_      12 - 22
       wrkstat  23 - 33
-      hrs2     34 - 44
+      hrs1     34 - 44
       marital  45 - 55
       sex      56 - 66
       babies   67 - 77
@@ -17,7 +17,7 @@ using GSS.dat;
 label variable year     "Gss year for this respondent                       ";
 label variable id_      "Respondent id number";
 label variable wrkstat  "Labor force status";
-label variable hrs2     "Number of hours usually work a week";
+label variable hrs1     "Number of hours worked last week";
 label variable marital  "Marital status";
 label variable sex      "Respondents sex";
 label variable babies   "Household members less than 6 yrs old";
@@ -83,7 +83,7 @@ label define gsp009x
 
 
 label values wrkstat  gsp001x;
-label values hrs2     gsp002x;
+label values hrs1     gsp002x;
 label values marital  gsp003x;
 label values sex      gsp004x;
 label values babies   gsp005x;

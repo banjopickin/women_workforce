@@ -1,8 +1,8 @@
-DATA LIST FILE=TEMP FIXED RECORDS=1 TABLE /
+cdDATA LIST FILE=TEMP FIXED RECORDS=1 TABLE /
    YEAR     1 - 11
    ID_      12 - 22
    WRKSTAT  23 - 33
-   HRS2     34 - 44
+   HRS1     34 - 44
    MARITAL  45 - 55
    SEX      56 - 66
    BABIES   67 - 77
@@ -16,7 +16,7 @@ VARIABLE LABELS
    YEAR     "Gss year for this respondent                       "
    ID_      "Respondent id number"
    WRKSTAT  "Labor force status"
-   HRS2     "Number of hours usually work a week"
+   HRS1     "Number of hours worked last week"
    MARITAL  "Marital status"
    SEX      "Respondents sex"
    BABIES   "Household members less than 6 yrs old"
@@ -38,7 +38,7 @@ VALUE LABELS
       2        "Working parttime"
       1        "Working fulltime"
       0        "Not applicable"
- / HRS2
+ / HRS1
       99       "No answer"
       98       "Don't know"
       -1       "Not applicable"

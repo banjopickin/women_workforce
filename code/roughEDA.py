@@ -13,7 +13,7 @@ def simple_bar(col, size = (8,8)):
     :param size: figuresize, tuple
     :return: bar-chart
     '''
-    val_counts = col.value_counts()
+    val_counts = col.value_counts(dropna=False)
     labels = val_counts.index
     ind = np.arange(len(labels))
     values = val_counts.values

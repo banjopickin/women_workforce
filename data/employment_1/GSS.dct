@@ -1,0 +1,14 @@
+infile dictionary {
+    _column(1)    numeric                               YEAR   %11f  "Gss year for this respondent                       "
+   _column(12)    numeric                                ID_   %11f  "Respondent id number"
+   _column(23)    numeric                            WRKSTAT   %11f  "Labor force status"
+   _column(34)    numeric                               HRS1   %11f  "Number of hours worked last week"
+   _column(45)    numeric                               HRS2   %11f  "Number of hours usually work a week"
+   _column(56)    numeric                            MARITAL   %11f  "Marital status"
+   _column(67)    numeric                                SEX   %11f  "Respondents sex"
+   _column(78)    numeric                             BABIES   %11f  "Household members less than 6 yrs old"
+   _column(89)    numeric                            PRETEEN   %11f  "Household members 6 thru 12 yrs old"
+  _column(100)    numeric                              TEENS   %11f  "Household members 13 thru 17 yrs old"
+  _column(111)    numeric                             ADULTS   %11f  "Household members 18 yrs and older"
+  _column(122)    numeric                              HAPPY   %11f  "General happiness"
+}

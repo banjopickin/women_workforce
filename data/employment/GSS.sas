@@ -61,7 +61,7 @@ DATA GSS.GSS;
       YEAR     11
       ID_      11
       WRKSTAT  11
-      HRS2     11
+      HRS1     11
       MARITAL  11
       SEX      11
       BABIES   11
@@ -74,7 +74,7 @@ DATA GSS.GSS;
       YEAR     ="Gss year for this respondent                       "
       ID_      ="Respondent id number"
       WRKSTAT  ="Labor force status"
-      HRS2     ="Number of hours usually work a week"
+      HRS1     ="Number of hours worked last week"
       MARITAL  ="Marital status"
       SEX      ="Respondents sex"
       BABIES   ="Household members less than 6 yrs old"
@@ -88,7 +88,7 @@ DATA GSS.GSS;
       YEAR     1 - 11
       ID_      12 - 22
       WRKSTAT  23 - 33
-      HRS2     34 - 44
+      HRS1     34 - 44
       MARITAL  45 - 55
       SEX      56 - 66
       BABIES   67 - 77
@@ -99,7 +99,7 @@ DATA GSS.GSS;
 
    FORMAT
       WRKSTAT  GSP001X.
-      HRS2     GSP002X.
+      HRS1     GSP002X.
       MARITAL  GSP003X.
       SEX      GSP004X.
       BABIES   GSP005X.

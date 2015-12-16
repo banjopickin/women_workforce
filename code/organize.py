@@ -41,23 +41,3 @@ def replace_variables(df,variables):
 
 
 
-# def main():
-#     '''
-#
-#     :return:
-#     '''
-#     dir = sys.argv[1]
-#     variables = extract_variables(dir)
-#     df = pd.read_excel(sys.argv[2])
-#     replace_variables(df,variables)
-#     print df.head()
-#
-# if __name__ == '__main__':
-#     main()
-
-
-    # fig, ax = plt.subplots(figsize = (8,8))
-    # rects = ax.bar(ind,values)
-    # ax.set_xticks(ind + width)
-    # ax.set_xticklabels(labels)
-    # autolabel(rects)
