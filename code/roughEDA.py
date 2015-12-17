@@ -1,9 +1,11 @@
 '''
 This script contains functions that can be used for basic data exploration analysis
 '''
+from __future__ import division
 import pandas as pd
 import numpy as np
 import matplotlib.pylab as plt
+import scipy.stats as scs
 plt.style.use('ggplot')
 
 def simple_bar(col, size = (8,8)):
@@ -63,4 +65,27 @@ def pie_chart(col_fracs, col_lab, size = (20,8)):
     temp_df = pd.crosstab(col_lab, col_fracs, dropna=False)
     temp_df.plot(kind = 'pie',subplots = True, figsize = size,autopct='%.2f')
 
-def z-test()
+
+def z_test(df,two_tail = False):
+    '''
+    Apply z-test to compare ratio within 4-cell crosstab data frame
+    :param df: cross-tab data frame
+    :param two_tail: one-tailed test, or two-tailed
+    :return: z-score and p-value
+    '''
+    na_f, na_t = df.values[0]
+    nb_f, nb_t = df.values[1]
+    na,nb = df.sum(axis =1)
+    pa = na_t/na
+    pb = nb_t/nb
+    pooled = (na_t+nb_t)/(na+nb)
+    s = np.sqrt(pooled*(1-pooled)*(1/na+1/nb))
+    z = (pa-pb)/s
+    if two_tail:
+        p = (1 - scs.norm.cdf(abs(z)))*2
+    else:
+        p = 1- scs.norm.cdf(abs(z))
+    return z,p
+
+
+
