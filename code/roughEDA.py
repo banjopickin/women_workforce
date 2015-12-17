@@ -63,4 +63,4 @@ def pie_chart(col_fracs, col_lab, size = (20,8)):
     temp_df = pd.crosstab(col_lab, col_fracs, dropna=False)
     temp_df.plot(kind = 'pie',subplots = True, figsize = size,autopct='%.2f')
 
-
+def z-test()

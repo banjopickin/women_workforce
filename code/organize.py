@@ -40,4 +40,14 @@ def replace_variables(df,variables):
     df.columns = [variables[c].lower() for c in df.columns]
 
 
-
+def make_bool(df,lis,border, prefix):
+    '''
+    convert numeric columns into boolean columns
+    :param df: dataframe
+    :param lis: list columns to be converted
+    :param border: border number
+    :param prefix: string to concat for new column names
+    :return: new columns
+    '''
+    for col in lis:
+        df[prefix+'_'+col] = df[col] > border
