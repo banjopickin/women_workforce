@@ -20,11 +20,11 @@ class survey(object):
         '''
         self.dir = dir
         self.data = pd.read_excel(dir + '/GSS.xls')
-        self.cols_drop = ['babies','preteen']
+        self.cols_drop = ['babies','preteen','wrkstat']
         self.row_drop = ['babies','preteen']
 
 
-    def simp_var(self):
+    def _simp_var(self):
         '''
         simplify columns by replacing with short labels
         :param self.dir
@@ -33,7 +33,7 @@ class survey(object):
         variables = extract_variables(self.dir + '/GSS.sps')
         replace_variables(self.data,variables)
 
-    def filter(self):
+    def _filter(self):
         '''
         select population with babies or preteen children
         :return: none
@@ -43,7 +43,7 @@ class survey(object):
         # drop 'no answer' respondent
         self.data = temp[temp[self.row_drop].apply(lambda x: x!= 'No answer').sum(axis = 1) >0]
 
-    def employ(self):
+    def _employ(self):
         '''
         create a new column indicating if the respondent is employed or not, based on the info in wrkstat cloumn
         This column will be the target for modeling
@@ -58,8 +58,13 @@ class survey(object):
         steps:
         1. simplify variable labels
         2. filter women with babies and preteens
-        3.
-        :return:
+        3. create 'employed' column
+        4. drop columns
+        :return: none
         '''
-        pass
+        self._simp_var()
+        self._filter()
+        self._employ()
+        self.data.drop(self.cols_drop,axis=1,inplace = True)
+
 

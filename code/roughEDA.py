@@ -6,6 +6,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pylab as plt
 import scipy.stats as scs
+from scipy.stats import ttest_ind
+
 plt.style.use('ggplot')
 
 def simple_bar(col, size = (8,8)):
@@ -40,7 +42,9 @@ def stack_bar(colx,coly,size = (8,8)):
     :output: stacked  bar chart
     '''
     temp_df = pd.crosstab(colx,coly,dropna=False)
-    temp_df.plot(kind='bar', figsize = size)
+    temp_df.plot(kind='bar', figsize = size, stacked = True)
+    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
 
 def h_bar(col_group,col_split, size = (8,8)):
     '''
@@ -52,6 +56,7 @@ def h_bar(col_group,col_split, size = (8,8)):
     '''
     temp_df = pd.crosstab(col_group,col_split,dropna=False)
     temp_df.plot(kind = 'barh', figsize = size)
+    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 
 
 def pie_chart(col_fracs, col_lab, size = (20,8)):
@@ -99,4 +104,9 @@ def simple_pie(col, size = (8,8)):
           fancybox=True, shadow=True, ncol=5)
 
 
+def ttest_by(vals, by):
+    '''Compute a t-test on a column based on an indicator for which sample the values are in.'''
+    vals1 = vals[by]
+    vals2 = vals[-by]
 
+    return ttest_ind(vals1, vals2)

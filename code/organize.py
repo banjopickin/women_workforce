@@ -3,6 +3,7 @@ This script aims to clean excel files downloaded from GSS.
 '''
 
 import pandas as pd
+import numpy as np
 from collections import defaultdict
 
 def extract_variables(filedir):
@@ -46,7 +47,18 @@ def make_bool(df,lis,border, prefix):
     :param lis: list columns to be converted
     :param border: border number
     :param prefix: string to concat for new column names
-    :return: new columns
+    :raise: new columns
     '''
     for col in lis:
         df[prefix+'_'+col] = df[col] > border
+
+def hrs(df, hr_col, bs_lis):
+    '''
+    Treat "no answer", "not applicable" as nan, then replace with column median
+    :param df: dataframe
+    :param hr_cols: hour column
+    :param bs_lis: list of strings in hour columns
+    :raise: a new hour-column which combines prevoius hour columns
+    '''
+    df[hr_col] = df[hr_col].replace(bs_lis,np.nan)
+    df[hr_col].fillna(df[hr_col].median(),inplace=True)
