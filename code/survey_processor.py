@@ -20,7 +20,7 @@ class survey(object):
         '''
         self.dir = dir
         self.data = pd.read_excel(dir + '/GSS.xls')
-        self.cols_drop = ['babies','preteen','wrkstat']
+        self.cols_drop = ['babies','preteen','wrkstat','sphrs2']
         self.row_drop = ['babies','preteen']
 
 

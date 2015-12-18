@@ -110,3 +110,18 @@ def ttest_by(vals, by):
     vals2 = vals[-by]
 
     return ttest_ind(vals1, vals2)
+
+def check_bs(col,bs_lis):
+    '''
+    Check numeric variables. count the number of observations labeled as "no answer", "not applicable" or "don't know"
+    visualize the proportation of each "bs" label within bs subgroup.
+    :param col: numeric feature
+    :param bs_lis: list of stirng
+    :return: float (raotio of observations in bs subgroup), int(number of observations in bs subgroup),
+             bar graph to show the number of each bs word
+             histgraph to show distribution of the numeric feature after the bs words removed
+    '''
+    temp = col. replace(bs_lis, np.nan)
+    print "BS ratio: {}".format(temp.isnull().sum()/col.count())
+    print "BS number: {}".format(temp.isnull().sum())
+    simple_bar(col[col.apply(lambda x: x in bs_lis)])
