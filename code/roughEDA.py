@@ -13,7 +13,7 @@ def simple_bar(col, size = (8,8)):
     generate a bar-chart to visualize counts of categorical variable
     :param col: specific column
     :param size: figuresize, tuple
-    :return: bar-chart
+    :output: bar-chart
     '''
     val_counts = col.value_counts(dropna=False)
     labels = val_counts.index
@@ -37,7 +37,7 @@ def stack_bar(colx,coly,size = (8,8)):
     :param colx: varialbes show on x-axis
     :param coly: variables counts show on y-axis
     :param size: figure size
-    :return: stacked  bar chart
+    :output: stacked  bar chart
     '''
     temp_df = pd.crosstab(colx,coly,dropna=False)
     temp_df.plot(kind='bar', figsize = size)
@@ -48,7 +48,7 @@ def h_bar(col_group,col_split, size = (8,8)):
     :param colx: varialbes to group
     :param coly: variables to split within each group
     :param size: figsize
-    :return: horizontal bar chart
+    :output: horizontal bar chart
     '''
     temp_df = pd.crosstab(col_group,col_split,dropna=False)
     temp_df.plot(kind = 'barh', figsize = size)
@@ -60,7 +60,7 @@ def pie_chart(col_fracs, col_lab, size = (20,8)):
     :param col_fracs: variable value counts to show on pie chart
     :param col_lab: each slice label
     :param size: figsize
-    :return: pie chart
+    :output: pie chart
     '''
     temp_df = pd.crosstab(col_lab, col_fracs, dropna=False)
     temp_df.plot(kind = 'pie',subplots = True, figsize = size,autopct='%.2f')
@@ -86,6 +86,17 @@ def z_test(df,two_tail = False):
     else:
         p = 1- scs.norm.cdf(abs(z))
     return z,p
+
+def simple_pie(col, size = (8,8)):
+    '''
+    visualize proportion of values in a column, using pie chart
+    :param col: data frame column
+    :param size: figure size
+    :display: pie chart
+    '''
+    col.value_counts().plot(kind = 'pie',subplots = True, figsize = size,autopct='%.2f')
+    plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05),
+          fancybox=True, shadow=True, ncol=5)
 
 
 

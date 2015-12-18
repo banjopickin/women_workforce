@@ -1,0 +1,7 @@
+infile dictionary {
+    _column(1)    numeric                               YEAR   %11f  "Gss year for this respondent                       "
+   _column(12)    numeric                                ID_   %11f  "Respondent id number"
+   _column(23)    numeric                            DISCAFF   %11f  "Whites hurt by aff. action"
+   _column(34)    numeric                           DISCAFFW   %11f  "A woman won't get a job or promotion             "
+   _column(45)    numeric                           MEOVRWRK   %11f  "Men hurt family when focus on work too much"
+}

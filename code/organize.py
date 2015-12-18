@@ -3,7 +3,6 @@ This script aims to clean excel files downloaded from GSS.
 '''
 
 import pandas as pd
-import sys
 from collections import defaultdict
 
 def extract_variables(filedir):

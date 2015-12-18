@@ -1,0 +1,1824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DDIInstance xmlns="ddi:instance:3_1" xmlns:ddi="ddi:instance:3_1" xmlns:r="ddi:reusable:3_1" xmlns:dc="ddi:dcelements:3_1" xmlns:dc2="http://purl.org/dc/elements/1.1/" xmlns:g="ddi:group:3_1" xmlns:d="ddi:datacollection:3_1" xmlns:l="ddi:logicalproduct:3_1" xmlns:pi="ddi:physicalinstance:3_1" xmlns:p="ddi:physicaldataproduct:3_1" xmlns:s="ddi:studyunit:3_1" xmlns:c="ddi:conceptualcomponent:3_1" xmlns:pni="ddi:physicaldataproduct_ncube_inline:3_1" xmlns:pn="ddi:physicaldataproduct_ncube_normal:3_1" xmlns:a="ddi:archive:3_1" id="id-30603db0-871d-0133-4db4-005056824c06" version="1.0.0" agency="OrlinResearch.com">
+  <s:StudyUnit id="id-30604070-871d-0133-4db4-005056824c06" version="1.0.0" agency="OrlinResearch.com">
+    <r:Citation>
+      <r:Title/>
+    </r:Citation>
+    <s:Abstract id="id-30605be0-871d-0133-4db4-005056824c06">
+      <r:Content/>
+    </s:Abstract>
+    <r:UniverseReference>
+      <r:Scheme isReference="true">
+        <r:ID>id-30604240-871d-0133-4db4-005056824c06</r:ID>
+        <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+        <r:Version>1.0.0</r:Version>
+      </r:Scheme>
+      <r:ID>id-30604160-871d-0133-4db4-005056824c06</r:ID>
+      <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+      <r:Version>1.0.0</r:Version>
+    </r:UniverseReference>
+    <s:Purpose id="id-30606870-871d-0133-4db4-005056824c06">
+      <r:Content/>
+    </s:Purpose>
+    <c:ConceptualComponent id="id-30606ba0-871d-0133-4db4-005056824c06" version="1.0.0" agency="OrlinResearch.com">
+      <c:UniverseScheme id="id-30604240-871d-0133-4db4-005056824c06" version="1.0.0" agency="OrlinResearch.com">
+        <c:Universe id="id-30604160-871d-0133-4db4-005056824c06" version="1.0.0">
+          <c:HumanReadable/>
+        </c:Universe>
+      </c:UniverseScheme>
+    </c:ConceptualComponent>
+    <d:DataCollection id="id-30607330-871d-0133-4db4-005056824c06" agency="OrlinResearch.com" version="1.0.0">
+      <r:Label>General Social Survey</r:Label>
+      <r:Description>The General Social Survey (GSS) conducts basic scientific research on the structure and development of American society with a data-collection program designed to both monitor societal change within the United States and to compare the United States to other nations.
+&lt;br&gt;
+&lt;br&gt;
+The GSS contains a standard 'core' of demographic, behavioral, and attitudinal questions, plus topics of special interest. Many of the core questions have remained unchanged since 1972 to facilitate time-trend studies as well as replication of earlier findings. The GSS takes the pulse of America, and is a unique and valuable resource. It has tracked the opinions of Americans over the last four decades.
+&lt;br&gt;
+&lt;br&gt;
+Except for the U.S. Census, the GSS is the most frequently analyzed source of information in the social sciences.</r:Description>
+    </d:DataCollection>
+    <l:LogicalProduct id="id-30604340-871d-0133-4db4-005056824c06" version="1.0.0" agency="OrlinResearch.com">
+      <l:DataRelationship id="id-30613e70-871d-0133-4db4-005056824c06" version="1.0.0">
+        <l:LogicalRecord id="id-306213c0-871d-0133-4db4-005056824c06" hasLocator="false">
+          <l:LogicalRecordName>Combined</l:LogicalRecordName>
+          <r:Label>Combined 1972_2014</r:Label>
+          <r:Description>Combined 1972_2014</r:Description>
+          <l:VariablesInRecord allVariablesInLogicalProduct="false">
+            <l:VariableSchemeReference isReference="true">
+              <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </l:VariableSchemeReference>
+          </l:VariablesInRecord>
+        </l:LogicalRecord>
+        <l:LogicalRecord id="id-306bab00-871d-0133-4db4-005056824c06" hasLocator="false">
+          <l:LogicalRecordName>Combined_1</l:LogicalRecordName>
+          <r:Label>Combined 1972_2014</r:Label>
+          <r:Description>Combined 1972_2014</r:Description>
+          <l:VariablesInRecord allVariablesInLogicalProduct="false">
+            <l:VariableSchemeReference isReference="true">
+              <r:ID>id-306bac60-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </l:VariableSchemeReference>
+          </l:VariablesInRecord>
+        </l:LogicalRecord>
+        <l:LogicalRecord id="id-30711540-871d-0133-4db4-005056824c06" hasLocator="false">
+          <l:LogicalRecordName>Combined_4</l:LogicalRecordName>
+          <r:Label>Combined 1972_2014</r:Label>
+          <r:Description>Combined 1972_2014</r:Description>
+          <l:VariablesInRecord allVariablesInLogicalProduct="false">
+            <l:VariableSchemeReference isReference="true">
+              <r:ID>id-307116c0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </l:VariableSchemeReference>
+          </l:VariablesInRecord>
+        </l:LogicalRecord>
+        <l:LogicalRecord id="id-30764ff0-871d-0133-4db4-005056824c06" hasLocator="false">
+          <l:LogicalRecordName>Combined_5</l:LogicalRecordName>
+          <r:Label>Combined 1972_2014</r:Label>
+          <r:Description>Combined 1972_2014</r:Description>
+          <l:VariablesInRecord allVariablesInLogicalProduct="false">
+            <l:VariableSchemeReference isReference="true">
+              <r:ID>id-30765180-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </l:VariableSchemeReference>
+          </l:VariablesInRecord>
+        </l:LogicalRecord>
+        <l:RecordRelationship id="id-307cec00-871d-0133-4db4-005056824c06">
+          <l:RecordReferenceSource relation="Parent">
+            <l:VariableReference>
+              <r:Scheme isReference="true">
+                <r:ID>id-306bac60-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID/>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </l:VariableReference>
+          </l:RecordReferenceSource>
+          <l:RecordReferenceTarget>
+            <r:Scheme isReference="true">
+              <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </r:Scheme>
+            <r:ID>id-306bab00-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+          </l:RecordReferenceTarget>
+        </l:RecordRelationship>
+        <l:RecordRelationship id="id-307da800-871d-0133-4db4-005056824c06">
+          <l:RecordReferenceSource relation="Parent">
+            <l:VariableReference>
+              <r:Scheme isReference="true">
+                <r:ID>id-307116c0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID/>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </l:VariableReference>
+          </l:RecordReferenceSource>
+          <l:RecordReferenceTarget>
+            <r:Scheme isReference="true">
+              <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </r:Scheme>
+            <r:ID>id-30711540-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+          </l:RecordReferenceTarget>
+        </l:RecordRelationship>
+        <l:RecordRelationship id="id-307dbac0-871d-0133-4db4-005056824c06">
+          <l:RecordReferenceSource relation="Parent">
+            <l:VariableReference>
+              <r:Scheme isReference="true">
+                <r:ID>id-307116c0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID/>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </l:VariableReference>
+          </l:RecordReferenceSource>
+          <l:RecordReferenceTarget>
+            <r:Scheme isReference="true">
+              <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </r:Scheme>
+            <r:ID>id-30711540-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+          </l:RecordReferenceTarget>
+        </l:RecordRelationship>
+        <l:RecordRelationship id="id-307dca80-871d-0133-4db4-005056824c06">
+          <l:RecordReferenceSource relation="Parent">
+            <l:VariableReference>
+              <r:Scheme isReference="true">
+                <r:ID>id-307116c0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID/>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </l:VariableReference>
+          </l:RecordReferenceSource>
+          <l:RecordReferenceTarget>
+            <r:Scheme isReference="true">
+              <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </r:Scheme>
+            <r:ID>id-30711540-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+          </l:RecordReferenceTarget>
+        </l:RecordRelationship>
+        <l:RecordRelationship id="id-307ddb80-871d-0133-4db4-005056824c06">
+          <l:RecordReferenceSource relation="Parent">
+            <l:VariableReference>
+              <r:Scheme isReference="true">
+                <r:ID>id-307116c0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID/>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </l:VariableReference>
+          </l:RecordReferenceSource>
+          <l:RecordReferenceTarget>
+            <r:Scheme isReference="true">
+              <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </r:Scheme>
+            <r:ID>id-30711540-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+          </l:RecordReferenceTarget>
+        </l:RecordRelationship>
+        <l:RecordRelationship id="id-307e8890-871d-0133-4db4-005056824c06">
+          <l:RecordReferenceSource relation="Parent">
+            <l:VariableReference>
+              <r:Scheme isReference="true">
+                <r:ID>id-30765180-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID/>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </l:VariableReference>
+          </l:RecordReferenceSource>
+          <l:RecordReferenceTarget>
+            <r:Scheme isReference="true">
+              <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </r:Scheme>
+            <r:ID>id-30764ff0-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+          </l:RecordReferenceTarget>
+        </l:RecordRelationship>
+        <l:RecordRelationship id="id-307e99a0-871d-0133-4db4-005056824c06">
+          <l:RecordReferenceSource relation="Parent">
+            <l:VariableReference>
+              <r:Scheme isReference="true">
+                <r:ID>id-30765180-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID/>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </l:VariableReference>
+          </l:RecordReferenceSource>
+          <l:RecordReferenceTarget>
+            <r:Scheme isReference="true">
+              <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </r:Scheme>
+            <r:ID>id-30764ff0-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+          </l:RecordReferenceTarget>
+        </l:RecordRelationship>
+        <l:RecordRelationship id="id-307eabb0-871d-0133-4db4-005056824c06">
+          <l:RecordReferenceSource relation="Parent">
+            <l:VariableReference>
+              <r:Scheme isReference="true">
+                <r:ID>id-30765180-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID/>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </l:VariableReference>
+          </l:RecordReferenceSource>
+          <l:RecordReferenceTarget>
+            <r:Scheme isReference="true">
+              <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </r:Scheme>
+            <r:ID>id-30764ff0-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+          </l:RecordReferenceTarget>
+        </l:RecordRelationship>
+        <l:RecordRelationship id="id-307ebab0-871d-0133-4db4-005056824c06">
+          <l:RecordReferenceSource relation="Parent">
+            <l:VariableReference>
+              <r:Scheme isReference="true">
+                <r:ID>id-30765180-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID/>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </l:VariableReference>
+          </l:RecordReferenceSource>
+          <l:RecordReferenceTarget>
+            <r:Scheme isReference="true">
+              <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </r:Scheme>
+            <r:ID>id-30764ff0-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+          </l:RecordReferenceTarget>
+        </l:RecordRelationship>
+        <l:RecordRelationship id="id-307eca40-871d-0133-4db4-005056824c06">
+          <l:RecordReferenceSource relation="Parent">
+            <l:VariableReference>
+              <r:Scheme isReference="true">
+                <r:ID>id-30765180-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID/>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </l:VariableReference>
+          </l:RecordReferenceSource>
+          <l:RecordReferenceTarget>
+            <r:Scheme isReference="true">
+              <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </r:Scheme>
+            <r:ID>id-30764ff0-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+          </l:RecordReferenceTarget>
+        </l:RecordRelationship>
+      </l:DataRelationship>
+      <l:VariableScheme id="id-306215a0-871d-0133-4db4-005056824c06" agency="OrlinResearch.com" version="1.0.0">
+        <l:Variable id="id-30692b50-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>wrkstat</l:VariableName>
+          <r:Label type="name">wrkstat</r:Label>
+          <r:Label type="label">Labor force status</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-30694910-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>marital</l:VariableName>
+          <r:Label type="name">marital</r:Label>
+          <r:Label type="label">Marital status</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306957b0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>sphrs1</l:VariableName>
+          <r:Label type="name">sphrs1</r:Label>
+          <r:Label type="label">Number of hrs spouse worked last week</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306963e0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>sphrs2</l:VariableName>
+          <r:Label type="name">sphrs2</r:Label>
+          <r:Label type="label">No. of hrs spouse usually works a week</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-30696fd0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>age</l:VariableName>
+          <r:Label type="name">age</r:Label>
+          <r:Label type="label">Age of respondent</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-30697d80-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>agekdbrn</l:VariableName>
+          <r:Label type="name">agekdbrn</r:Label>
+          <r:Label type="label">R's age when 1st child born</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-30698b70-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>paeduc</l:VariableName>
+          <r:Label type="name">paeduc</r:Label>
+          <r:Label type="label">Highest year school completed, father</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306997c0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>maeduc</l:VariableName>
+          <r:Label type="name">maeduc</r:Label>
+          <r:Label type="label">Highest year school completed, mother</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-3069a7b0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>speduc</l:VariableName>
+          <r:Label type="name">speduc</r:Label>
+          <r:Label type="label">Highest year school completed, spouse</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-3069b4d0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>degree</l:VariableName>
+          <r:Label type="name">degree</r:Label>
+          <r:Label type="label">Rs highest degree</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-3069c2d0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>mawrkgrw</l:VariableName>
+          <r:Label type="name">mawrkgrw</r:Label>
+          <r:Label type="label">Mothers employment when r was 16</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-3069cec0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>incom16</l:VariableName>
+          <r:Label type="name">incom16</r:Label>
+          <r:Label type="label">Rs family income when 16 yrs old</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-3069da50-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>babies</l:VariableName>
+          <r:Label type="name">babies</r:Label>
+          <r:Label type="label">Household members less than 6 yrs old</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-3069e680-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>preteen</l:VariableName>
+          <r:Label type="name">preteen</r:Label>
+          <r:Label type="label">Household members 6 thru 12 yrs old</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-3069f5a0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>natspac</l:VariableName>
+          <r:Label type="name">natspac</r:Label>
+          <r:Label type="label">Space exploration program</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306a02b0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>nateduc</l:VariableName>
+          <r:Label type="name">nateduc</r:Label>
+          <r:Label type="label">Improving nations education system</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306a0f50-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>natarms</l:VariableName>
+          <r:Label type="name">natarms</r:Label>
+          <r:Label type="label">Military, armaments, and defense</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306a1b50-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>natfare</l:VariableName>
+          <r:Label type="name">natfare</r:Label>
+          <r:Label type="label">Welfare</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306a2f70-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>natsoc</l:VariableName>
+          <r:Label type="name">natsoc</r:Label>
+          <r:Label type="label">Social security</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306a3fa0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>natpark</l:VariableName>
+          <r:Label type="name">natpark</r:Label>
+          <r:Label type="label">Parks and recreation</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306a4b40-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>natfarey</l:VariableName>
+          <r:Label type="name">natfarey</r:Label>
+          <r:Label type="label">Assistance to the poor -- version y</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306a57b0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>eqwlth</l:VariableName>
+          <r:Label type="name">eqwlth</r:Label>
+          <r:Label type="label">Should govt reduce income differences</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306a6560-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>colath</l:VariableName>
+          <r:Label type="name">colath</r:Label>
+          <r:Label type="label">Allow anti-religionist to teach</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306a7180-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>colcom</l:VariableName>
+          <r:Label type="name">colcom</r:Label>
+          <r:Label type="label">Should communist teacher be fired</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306a7f70-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>spkhomo</l:VariableName>
+          <r:Label type="name">spkhomo</r:Label>
+          <r:Label type="label">Allow homosexual to speak</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306a8d70-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>affrmact</l:VariableName>
+          <r:Label type="name">affrmact</r:Label>
+          <r:Label type="label">Favor preference in hiring blacks</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306a9900-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>wrkwayup</l:VariableName>
+          <r:Label type="name">wrkwayup</r:Label>
+          <r:Label type="label">Blacks overcome prejudice without favors </r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306aa580-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>hapmar</l:VariableName>
+          <r:Label type="name">hapmar</r:Label>
+          <r:Label type="label">Happiness of marriage</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306ab450-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>helpful</l:VariableName>
+          <r:Label type="name">helpful</r:Label>
+          <r:Label type="label">People helpful or looking out for selves</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306ac0d0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>conbus</l:VariableName>
+          <r:Label type="name">conbus</r:Label>
+          <r:Label type="label">Confidence in major companies</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306acd70-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>coneduc</l:VariableName>
+          <r:Label type="name">coneduc</r:Label>
+          <r:Label type="label">Confidence in education</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306adc50-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>conlabor</l:VariableName>
+          <r:Label type="name">conlabor</r:Label>
+          <r:Label type="label">Confidence in organized labor</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306ae9a0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>thnkself</l:VariableName>
+          <r:Label type="name">thnkself</r:Label>
+          <r:Label type="label">To think for ones self</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306af4f0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>workhard</l:VariableName>
+          <r:Label type="name">workhard</r:Label>
+          <r:Label type="label">To work hard</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306b0260-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>helpoth</l:VariableName>
+          <r:Label type="name">helpoth</r:Label>
+          <r:Label type="label">To help others</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306b0e40-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>satjob</l:VariableName>
+          <r:Label type="name">satjob</r:Label>
+          <r:Label type="label">Job or housework</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306b1b00-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>richwork</l:VariableName>
+          <r:Label type="name">richwork</r:Label>
+          <r:Label type="label">If rich, continue or stop working</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306b28a0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>class_</l:VariableName>
+          <r:Label type="name">class_</r:Label>
+          <r:Label type="label">Subjective class identification</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306b3560-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>satfin</l:VariableName>
+          <r:Label type="name">satfin</r:Label>
+          <r:Label type="label">Satisfaction with financial situation</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306b4120-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>finrela</l:VariableName>
+          <r:Label type="name">finrela</r:Label>
+          <r:Label type="label">Opinion of family income</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306b5010-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>getahead</l:VariableName>
+          <r:Label type="name">getahead</r:Label>
+          <r:Label type="label">Opinion of how people get ahead</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306b5cc0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>kidssol</l:VariableName>
+          <r:Label type="name">kidssol</r:Label>
+          <r:Label type="label">Rs kids living standard compared to r</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306b6960-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>fepol</l:VariableName>
+          <r:Label type="name">fepol</r:Label>
+          <r:Label type="label">Women not suited for politics</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306b7830-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>fechld</l:VariableName>
+          <r:Label type="name">fechld</r:Label>
+          <r:Label type="label">Mother working doesn't hurt children</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306b84d0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>fepresch</l:VariableName>
+          <r:Label type="name">fepresch</r:Label>
+          <r:Label type="label">Preschool kids suffer if mother works</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306b9150-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>fefam</l:VariableName>
+          <r:Label type="name">fefam</r:Label>
+          <r:Label type="label">Better for man to work, woman tend home</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-306b9e90-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>helpsick</l:VariableName>
+          <r:Label type="name">helpsick</r:Label>
+          <r:Label type="label">Should govt help pay for medical care?</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+      </l:VariableScheme>
+      <l:VariableScheme id="id-306bac60-871d-0133-4db4-005056824c06" agency="OrlinResearch.com" version="1.0.0">
+        <l:Variable id="id-3070d0a0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>discaff</l:VariableName>
+          <r:Label type="name">discaff</r:Label>
+          <r:Label type="label">Whites hurt by aff. action</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-3070e9e0-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>fejobaff</l:VariableName>
+          <r:Label type="name">fejobaff</r:Label>
+          <r:Label type="label">For or against preferential hiring of women      </r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-3070fa10-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>discaffm</l:VariableName>
+          <r:Label type="name">discaffm</r:Label>
+          <r:Label type="label">A man won't get a job or promotion  </r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-30710710-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>discaffw</l:VariableName>
+          <r:Label type="name">discaffw</r:Label>
+          <r:Label type="label">A woman won't get a job or promotion             </r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+      </l:VariableScheme>
+      <l:VariableScheme id="id-307116c0-871d-0133-4db4-005056824c06" agency="OrlinResearch.com" version="1.0.0">
+        <l:Variable id="id-30762970-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>goodlife</l:VariableName>
+          <r:Label type="name">goodlife</r:Label>
+          <r:Label type="label">Standard of living of r will improve</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+        <l:Variable id="id-30764010-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>meovrwrk</l:VariableName>
+          <r:Label type="name">meovrwrk</r:Label>
+          <r:Label type="label">Men hurt family when focus on work too much</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+      </l:VariableScheme>
+      <l:VariableScheme id="id-30765180-871d-0133-4db4-005056824c06" agency="OrlinResearch.com" version="1.0.0">
+        <l:Variable id="id-307b5d80-871d-0133-4db4-005056824c06" version="1.0.0" isGeographic="false" isTemporal="false" isWeight="false">
+          <l:VariableName>realinc</l:VariableName>
+          <r:Label type="name">realinc</r:Label>
+          <r:Label type="label">Family income in constant $</r:Label>
+          <l:ResponseUnit>respondent</l:ResponseUnit>
+          <l:Representation>
+            <l:NumericRepresentation type="Double"/>
+          </l:Representation>
+        </l:Variable>
+      </l:VariableScheme>
+    </l:LogicalProduct>
+    <p:PhysicalDataProduct id="id-307f9100-871d-0133-4db4-005056824c06" version="1.0.0" agency="OrlinResearch.com">
+      <p:PhysicalStructureScheme id="id-306044f0-871d-0133-4db4-005056824c06" version="1.0.0" agency="OrlinResearch.com">
+        <p:PhysicalStructure id="id-30604410-871d-0133-4db4-005056824c06" version="1.0.0">
+          <p:LogicalProductReference isReference="true">
+            <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+          </p:LogicalProductReference>
+          <p:Format>ASCII_FIXED_NATIVE</p:Format>
+          <p:DefaultDecimalSeparator>.</p:DefaultDecimalSeparator>
+          <p:GrossRecordStructure numberOfPhysicalSegments="1" id="id-307fab50-871d-0133-4db4-005056824c06">
+            <p:LogicalRecordReference>
+              <r:Scheme>
+                <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306213c0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:LogicalRecordReference>
+            <p:PhysicalRecordSegment hasSegmentKey="false" id="id-307fa980-871d-0133-4db4-005056824c06" segmentOrder="1" isIdentifiable="true"/>
+          </p:GrossRecordStructure>
+          <p:GrossRecordStructure numberOfPhysicalSegments="1" id="id-3087b890-871d-0133-4db4-005056824c06">
+            <p:LogicalRecordReference>
+              <r:Scheme>
+                <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306bab00-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:LogicalRecordReference>
+            <p:PhysicalRecordSegment hasSegmentKey="false" id="id-3087b670-871d-0133-4db4-005056824c06" segmentOrder="1" isIdentifiable="true"/>
+          </p:GrossRecordStructure>
+          <p:GrossRecordStructure numberOfPhysicalSegments="1" id="id-308d12b0-871d-0133-4db4-005056824c06">
+            <p:LogicalRecordReference>
+              <r:Scheme>
+                <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-30711540-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:LogicalRecordReference>
+            <p:PhysicalRecordSegment hasSegmentKey="false" id="id-308d10a0-871d-0133-4db4-005056824c06" segmentOrder="1" isIdentifiable="true"/>
+          </p:GrossRecordStructure>
+          <p:GrossRecordStructure numberOfPhysicalSegments="1" id="id-30922880-871d-0133-4db4-005056824c06">
+            <p:LogicalRecordReference>
+              <r:Scheme>
+                <r:ID>id-30604340-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-30764ff0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:LogicalRecordReference>
+            <p:PhysicalRecordSegment hasSegmentKey="false" id="id-30922650-871d-0133-4db4-005056824c06" segmentOrder="1" isIdentifiable="true"/>
+          </p:GrossRecordStructure>
+        </p:PhysicalStructure>
+      </p:PhysicalStructureScheme>
+      <p:RecordLayoutScheme id="id-307fb4e0-871d-0133-4db4-005056824c06" agency="OrlinResearch.com" version="1.0.0">
+        <p:RecordLayout id="id-307fb790-871d-0133-4db4-005056824c06" version="1.0.0">
+          <p:PhysicalStructureReference>
+            <r:Scheme>
+              <r:ID>id-306044f0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </r:Scheme>
+            <r:ID>id-30604410-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+            <p:PhysicalRecordSegmentUsed>id-307fa980-871d-0133-4db4-005056824c06</p:PhysicalRecordSegmentUsed>
+          </p:PhysicalStructureReference>
+          <p:CharacterSet>US ASCII</p:CharacterSet>
+          <p:ArrayBase>0</p:ArrayBase>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-30692b50-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-30694910-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306957b0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306963e0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-30696fd0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-30697d80-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-30698b70-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306997c0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-3069a7b0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-3069b4d0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-3069c2d0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-3069cec0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-3069da50-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-3069e680-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-3069f5a0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306a02b0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306a0f50-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306a1b50-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306a2f70-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306a3fa0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306a4b40-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306a57b0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306a6560-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306a7180-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306a7f70-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306a8d70-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306a9900-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306aa580-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306ab450-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306ac0d0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306acd70-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306adc50-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306ae9a0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306af4f0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306b0260-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306b0e40-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306b1b00-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306b28a0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306b3560-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306b4120-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306b5010-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306b5cc0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306b6960-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306b7830-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306b84d0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306b9150-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306215a0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-306b9e90-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+        </p:RecordLayout>
+      </p:RecordLayoutScheme>
+      <p:RecordLayoutScheme id="id-3087c340-871d-0133-4db4-005056824c06" agency="OrlinResearch.com" version="1.0.0">
+        <p:RecordLayout id="id-3087c6a0-871d-0133-4db4-005056824c06" version="1.0.0">
+          <p:PhysicalStructureReference>
+            <r:Scheme>
+              <r:ID>id-306044f0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </r:Scheme>
+            <r:ID>id-30604410-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+            <p:PhysicalRecordSegmentUsed>id-3087b670-871d-0133-4db4-005056824c06</p:PhysicalRecordSegmentUsed>
+          </p:PhysicalStructureReference>
+          <p:CharacterSet>US ASCII</p:CharacterSet>
+          <p:ArrayBase>0</p:ArrayBase>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306bac60-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-3070d0a0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306bac60-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-3070e9e0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306bac60-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-3070fa10-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-306bac60-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-30710710-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+        </p:RecordLayout>
+      </p:RecordLayoutScheme>
+      <p:RecordLayoutScheme id="id-308d1da0-871d-0133-4db4-005056824c06" agency="OrlinResearch.com" version="1.0.0">
+        <p:RecordLayout id="id-308d20e0-871d-0133-4db4-005056824c06" version="1.0.0">
+          <p:PhysicalStructureReference>
+            <r:Scheme>
+              <r:ID>id-306044f0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </r:Scheme>
+            <r:ID>id-30604410-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+            <p:PhysicalRecordSegmentUsed>id-308d10a0-871d-0133-4db4-005056824c06</p:PhysicalRecordSegmentUsed>
+          </p:PhysicalStructureReference>
+          <p:CharacterSet>US ASCII</p:CharacterSet>
+          <p:ArrayBase>0</p:ArrayBase>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-307116c0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-30762970-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-307116c0-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-30764010-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+        </p:RecordLayout>
+      </p:RecordLayoutScheme>
+      <p:RecordLayoutScheme id="id-309233c0-871d-0133-4db4-005056824c06" agency="OrlinResearch.com" version="1.0.0">
+        <p:RecordLayout id="id-30923700-871d-0133-4db4-005056824c06" version="1.0.0">
+          <p:PhysicalStructureReference>
+            <r:Scheme>
+              <r:ID>id-306044f0-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </r:Scheme>
+            <r:ID>id-30604410-871d-0133-4db4-005056824c06</r:ID>
+            <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+            <r:Version>1.0.0</r:Version>
+            <p:PhysicalRecordSegmentUsed>id-30922650-871d-0133-4db4-005056824c06</p:PhysicalRecordSegmentUsed>
+          </p:PhysicalStructureReference>
+          <p:CharacterSet>US ASCII</p:CharacterSet>
+          <p:ArrayBase>0</p:ArrayBase>
+          <p:DataItem>
+            <p:VariableReference>
+              <r:Scheme>
+                <r:ID>id-30765180-871d-0133-4db4-005056824c06</r:ID>
+                <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+                <r:Version>1.0.0</r:Version>
+              </r:Scheme>
+              <r:ID>id-307b5d80-871d-0133-4db4-005056824c06</r:ID>
+              <r:IdentifyingAgency>OrlinResearch.com</r:IdentifyingAgency>
+              <r:Version>1.0.0</r:Version>
+            </p:VariableReference>
+            <p:PhysicalLocation>
+              <p:StartPosition/>
+              <p:Width/>
+            </p:PhysicalLocation>
+          </p:DataItem>
+        </p:RecordLayout>
+      </p:RecordLayoutScheme>
+    </p:PhysicalDataProduct>
+  </s:StudyUnit>
+</DDIInstance>
