@@ -16,7 +16,7 @@ class survey(object):
         '''
         Survey data processor
         :param dir: directory to folder which contains all the survey package
-        :return: read data, list columns to drop, list rows to filter
+        :output: read data, list columns to drop, list rows to filter
         '''
         self.dir = dir
         self.data = pd.read_excel(dir + '/GSS.xls')
