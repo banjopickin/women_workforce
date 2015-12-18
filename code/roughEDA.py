@@ -7,6 +7,7 @@ import numpy as np
 import matplotlib.pylab as plt
 import scipy.stats as scs
 from scipy.stats import ttest_ind
+from collections import defaultdict
 
 plt.style.use('ggplot')
 
@@ -117,11 +118,41 @@ def check_bs(col,bs_lis):
     visualize the proportation of each "bs" label within bs subgroup.
     :param col: numeric feature
     :param bs_lis: list of stirng
-    :return: float (raotio of observations in bs subgroup), int(number of observations in bs subgroup),
+    :raise: float (raotio of observations in bs subgroup), int(number of observations in bs subgroup),
              bar graph to show the number of each bs word
-             histgraph to show distribution of the numeric feature after the bs words removed
+
     '''
     temp = col. replace(bs_lis, np.nan)
     print "BS ratio: {}".format(temp.isnull().sum()/col.count())
     print "BS number: {}".format(temp.isnull().sum())
     simple_bar(col[col.apply(lambda x: x in bs_lis)])
+    #return col[col.apply(lambda x: x in bs_lis)]
+
+def check_impute(df, col_lis, target_col, bs_lis):
+    '''
+    label bs words in numeric columns with nan, pass it to t-test, to deteremine whether flag
+    or impute with mean or median.
+    :param df: data fame
+    :param col_lis: string list contains numeric column names
+    :param target_col: column for t-test
+    :param bs_lis: bs list, list of string
+    :return: dictionary. keys: column name. value: p-value
+    '''
+    dict = defaultdict(float)
+    for col in col_lis:
+        temp = df[col].replace(bs_lis, np.nan)
+        p_val = ttest_by(target_col,pd.isnull(temp))[1]
+        dict[col] = p_val
+    return dict
+
+def impute_median(col, bs_lis):
+    '''
+    impute strings with column median
+    :param col: column, panda series or np.array
+    :param bs_lis: string list
+    :return: new column
+    '''
+    temp = col.replace(bs_lis,np.nan)
+    temp.fillna(temp.median(), inplace= True)
+    return temp
+
