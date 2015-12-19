@@ -22,10 +22,20 @@ class survey(object):
         self.data = pd.read_excel(dir + '/GSS.xls')
         self.cols_drop = ['babies','preteen','wrkstat','sphrs2']
         self.row_drop = ['babies','preteen']
-        self.survey_cols = []
+        self.survey_cols = ['degree', 'mawrkgrw', 'incom16', 'natspac',
+                            'nateduc','natarms', 'natfare', 'natsoc',
+                            'natpark', 'natfarey', 'eqwlth','colath',
+                            'colcom', 'spkhomo', 'affrmact', 'wrkwayup',
+                            'hapmar','helpful', 'conbus', 'coneduc', 'conlabor',
+                            'thnkself','workhard', 'helpoth', 'satjob',
+                            'richwork', 'class_', 'satfin','finrela', 'getahead',
+                            'kidssol', 'fepol', 'fechld', 'fepresch','fefam',
+                            'helpsick', 'discaff', 'fejobaff', 'discaffm',
+                            'discaffw', 'goodlife', 'meovrwrk', 'realinc', 'employed']
         self.impute_cols = ['sphrs1','agekdbrn']
         self.par_impute_cols = ['maeduc','paeduc','speduc']
         self.bs = ['Not applicable', "Don't know",'No answer']
+
 
 
     def _simp_var(self):
@@ -71,6 +81,16 @@ class survey(object):
         self._employ()
         self.data.drop(self.cols_drop,axis=1,inplace = True)
 
+    def _impute_cols(self):
+        '''
+        impute numeric columns with median
+        :return: data frame
+        '''
+        df = pd.DataFrame()
+        for col in self.impute_cols:
+            df[col] = impute_median(self.data[col], self.bs)
+        return df
+
 
     def _partial_impute_bin(self):
         '''
@@ -93,8 +113,17 @@ class survey(object):
 
     def processor(self):
         '''
-        1.rough process
-        2.impute impute columns
-        3.
-        :return:
+        1. rough process
+        2. impute impute columns
+        3. impute par_impute_cols partially
+        4. concatenate with survey columns
+        :return: new data frame. This data frame can be used for random forest or any decision tree models
         '''
+        # rough process
+        self.rough_process()
+        df = self.data
+        impt_cols = self._impute_cols()
+        par_imp_cols = self._partial_impute_bin()
+        self.fin_data = pd.concat([impt_cols,par_imp_cols,df[self.survey_cols]], axis=1)
+
+
