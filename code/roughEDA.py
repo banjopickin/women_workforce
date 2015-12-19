@@ -145,14 +145,5 @@ def check_impute(df, col_lis, target_col, bs_lis):
         dict[col] = p_val
     return dict
 
-def impute_median(col, bs_lis):
-    '''
-    impute strings with column median
-    :param col: column, panda series or np.array
-    :param bs_lis: string list
-    :return: new column
-    '''
-    temp = col.replace(bs_lis,np.nan)
-    temp.fillna(temp.median(), inplace= True)
-    return temp
+
 

@@ -22,6 +22,10 @@ class survey(object):
         self.data = pd.read_excel(dir + '/GSS.xls')
         self.cols_drop = ['babies','preteen','wrkstat','sphrs2']
         self.row_drop = ['babies','preteen']
+        self.survey_cols = []
+        self.impute_cols = ['sphrs1','agekdbrn']
+        self.par_impute_cols = ['maeduc','paeduc','speduc']
+        self.bs = ['Not applicable', "Don't know",'No answer']
 
 
     def _simp_var(self):
@@ -68,3 +72,29 @@ class survey(object):
         self.data.drop(self.cols_drop,axis=1,inplace = True)
 
 
+    def _partial_impute_bin(self):
+        '''
+        Partially impute columns then flag the rest of strings and make dummie variables
+        :return: subset data frame
+        '''
+        a = pd.DataFrame()
+        for col in self.par_impute_cols:
+            if col == "speduc":
+                a[col] = sub_impute(self.data[col],["No answer","Don't know"], self.bs)
+                a[col].replace("Not applicable", -99, inplace = True)
+                a[col + "_not_app"] = a[col].apply(lambda x: x==99)
+            else:
+                a[col] = sub_impute(self.data[col],['No answer'], self.bs)
+                a[col].replace("Not applicable",-99, inplace = True)
+                a[col + "_not_app"] = a[col]== -99
+                a[col].replace("Don't know", -98, inplace = True)
+                a[col + "_dn_kwn"] = a[col] == -98
+        return a
+
+    def processor(self):
+        '''
+        1.rough process
+        2.impute impute columns
+        3.
+        :return:
+        '''

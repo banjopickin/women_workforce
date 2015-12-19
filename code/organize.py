@@ -52,13 +52,27 @@ def make_bool(df,lis,border, prefix):
     for col in lis:
         df[prefix+'_'+col] = df[col] > border
 
-def hrs(df, hr_col, bs_lis):
+def impute_median(col, bs_lis):
     '''
-    Treat "no answer", "not applicable" as nan, then replace with column median
-    :param df: dataframe
-    :param hr_cols: hour column
-    :param bs_lis: list of strings in hour columns
-    :raise: a new hour-column which combines prevoius hour columns
+    impute strings with column median
+    :param col: column, panda series or np.array
+    :param bs_lis: string list
+    :return: new column
     '''
-    df[hr_col] = df[hr_col].replace(bs_lis,np.nan)
-    df[hr_col].fillna(df[hr_col].median(),inplace=True)
+    temp = col.replace(bs_lis,np.nan)
+    temp.fillna(temp.median(), inplace= True)
+    return temp
+
+
+def sub_impute(col,sub_bs, bs_lis):
+    '''
+    impute one or two string labels with median
+    :param col: column to impute
+    :param sub_bs: stings in the column to impute
+    :param bs_lis: entire bs string list
+    :return: sub_imputed column
+    '''
+    temp1 = col.replace(bs_lis, np.nan)
+    med = temp1.median()
+    temp2 = col.replace(sub_bs,med)
+    return temp2
