@@ -1,6 +1,6 @@
 '''
 Treat the entire survey data a class object. Use a series of functions to process the data for machine learnig step.
-In the mean time,
+In the meantime, copy_rough function passes the half-way processed data frame to self.data. It can be used for more EDA.
 '''
 
 from __future__ import division
@@ -18,7 +18,10 @@ class survey(object):
         '''
         Survey data processor
         :param dir: directory to folder which contains all the survey package
-        :output: read data, list columns to drop, list rows to filter
+        :initiate: data folder, raw data, list columns to drop, list rows to filter
+                   columns contain survey questions, columns to impute,
+                   columns to partially impute, list of "empty answers" such as "Not applicable"
+                   "Don't know", "No answer".
         '''
         self.dir = dir
         self.raw_data = pd.read_excel(dir + '/GSS.xls')
@@ -59,27 +62,30 @@ class survey(object):
         # drop 'no answer' respondent
         return temp[temp[self.row_drop].apply(lambda x: x!= 'No answer').sum(axis = 1) >0]
 
-    def _employ(self):
-        '''
-        create a new column indicating if the respondent is employed or not, based on the info in wrkstat cloumn
-        This column will be the target for modeling
-        :return: none
-        '''
-        employed = ['Working fulltime', 'Working parttime']
-        self.data['employed'] = self.data.wrkstat.apply(lambda x: x in employed)
+    # def _employ(self):
+    #     '''
+    #     create a new column indicating if the respondent is employed or not, based on the info in wrkstat cloumn
+    #     This column will be the target for modeling
+    #     :return: none
+    #     '''
+    #     employed = ['Working fulltime', 'Working parttime']
+    #     self.data['employed'] = self.data.wrkstat.apply(lambda x: x in employed)
 
 
     def _rough_process(self):
         '''
+        roughly process raw data, and will pass it to final process
         steps:
         1. simplify variable labels
         2. filter women with babies and preteens
         3. create 'employed' column
         4. drop columns
-        :return: none
+        :return: data frame
         '''
+        #pdb.set_trace()
         variables = extract_variables(self.dir + '/GSS.sps')
         a = [i.upper() for i in self.raw_data.columns]
+        pdb.set_trace()
         if set(a) != set(variables.values()):
             self._simp_var()
         df = self._filter()
@@ -90,10 +96,9 @@ class survey(object):
 
     def copy_rough(self):
         '''
-        need this for eda part
+        pretty much similar to _rough_process, except this generates self.data.
         :return: self.data
         '''
-        #pdb.set_trace()
         variables = extract_variables(self.dir + '/GSS.sps')
         a = [i.upper() for i in self.raw_data.columns]
         if set(a) != set(variables.values()):
@@ -125,14 +130,14 @@ class survey(object):
         for col in self.par_impute_cols:
             if col == "speduc":
                 a[col] = sub_impute(self.raw_data[col],["No answer","Don't know"], self.bs)
-                a[col].replace("Not applicable", -99, inplace = True)
+                a[col].replace("Not applicable", -99, inplace = True)        #flag with -99
                 a[col + "_not_app"] = a[col].apply(lambda x: x==99)
             else:
                 a[col] = sub_impute(self.raw_data[col],['No answer'], self.bs)
                 a[col].replace("Not applicable",-99, inplace = True)
-                a[col + "_not_app"] = a[col]== -99
+                a[col + "_not_app"] = a[col]== -99                          #flag with -99
                 a[col].replace("Don't know", -98, inplace = True)
-                a[col + "_dn_kwn"] = a[col] == -98
+                a[col + "_dn_kwn"] = a[col] == -98                          #flag with -98
         return a
 
     def processor(self):
@@ -145,9 +150,11 @@ class survey(object):
         '''
         # rough process
         df = self._rough_process()
+        #impute columns
         impt_cols = self._impute_cols()
+        #partially impute columns
         par_imp_cols = self._partial_impute_bin()
-        #pdb.set_trace()
+        #generate final data
         self.fin_data = pd.concat([impt_cols,par_imp_cols,df[self.survey_cols]], axis=1)
 
 
