@@ -127,7 +127,9 @@ class survey(object):
         2. impute impute columns
         3. impute par_impute_cols partially
         4. concatenate with survey columns
-        :return: new data frame. This data frame can be used for random forest or any decision tree models
+        :raise:
+        1. self.data: can be used for  EDA
+        2. self.fin_data: final data frame. This data frame can be used for random forest or any decision tree models
         '''
         # rough process
         self._rough_process()
@@ -138,5 +140,15 @@ class survey(object):
         par_imp_cols = self._partial_impute_bin()
         #generate final data
         self.data = pd.concat([impt_cols,par_imp_cols,df[self.survey_cols]], axis=1)
+        self._further_process()
+
+    def _further_process(self):
+        '''
+        further process data. convert numeric feautre to float type. Then dummie survey questions.
+        :raise: final data frame
+        '''
+        df = self.data.copy()
+        df.age = df.age.astype('float')
+        self.fin_data = pd.get_dummies(df)
 
 
