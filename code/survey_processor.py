@@ -1,5 +1,6 @@
 '''
-Treat the entire survey data a class object. Use a series of functions to process the data for machine learnig step.
+Treat the entire survey data a class object. Use a series of functions to process the data for EDA and
+machine learnig step.
 '''
 
 from __future__ import division
@@ -18,13 +19,15 @@ class survey(object):
         '''
         Survey data processor
         :param dir: directory to folder which contains all the survey package
-        :initiate: data folder, raw data, list columns to drop, list rows to filter
+        :initiate: data folder, raw data, EDA data,
+                   list columns to drop, list rows to filter
                    columns contain survey questions, columns to impute,
                    columns to partially impute, list of "empty answers" such as "Not applicable"
                    "Don't know", "No answer".
         '''
         self.dir = dir
-        self.data = pd.read_excel(dir + '/GSS.xls')
+        self.raw_data = pd.read_excel(dir + '/GSS.xls')
+        self.data = self.raw_data.copy(deep= True)
         self.cols_drop = ['babies','preteen','wrkstat','sphrs2']
         self.row_drop = ['babies','preteen']
         self.survey_cols = ['age','degree', 'mawrkgrw', 'incom16', 'natspac',
