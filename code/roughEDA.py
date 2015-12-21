@@ -9,6 +9,7 @@ import scipy.stats as scs
 from scipy.stats import ttest_ind
 from collections import defaultdict
 
+
 plt.style.use('ggplot')
 
 def simple_bar(col, size = (8,8)):
@@ -34,30 +35,32 @@ def simple_bar(col, size = (8,8)):
                 ha='center', va='bottom')
 
 
-def stack_bar(colx,coly,size = (8,8)):
+def v_bar(colx,coly,size = (8,8)):
     '''
-    create a stacked bar chart
+    create a stacked bar chart. percentiled
     :param colx: varialbes show on x-axis
     :param coly: variables counts show on y-axis
     :param size: figure size
     :output: stacked  bar chart
     '''
-    temp_df = pd.crosstab(colx,coly,dropna=False)
-    temp_df.plot(kind='bar', figsize = size, stacked = True)
+    temp = pd.crosstab(colx,coly,dropna=False)
+    t = temp.apply(lambda x: x/x.sum(), axis = 1)
+    t.T.plot(kind='bar', figsize = size, stacked = False)
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 
 
 def h_bar(col_group,col_split, size = (8,8)):
     '''
-    create a unstack horizontal bar chart
+    create a unstack horizontal bar chart.original number, not percentiled
     :param colx: varialbes to group
     :param coly: variables to split within each group
     :param size: figsize
     :output: horizontal bar chart
     '''
-    temp_df = pd.crosstab(col_group,col_split,dropna=False)
-    temp_df.plot(kind = 'barh', figsize = size)
-    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    temp = pd.crosstab(col_group,col_split,dropna=False)
+    #t = temp.apply(lambda x: x/x.sum(), axis = 1)
+    temp.plot(kind = 'barh', figsize = size)
+    plt.legend(title =col_group.name, loc='center left', bbox_to_anchor=(1, 0.5))
 
 
 def pie_chart(col_fracs, col_lab, size = (20,8)):
@@ -71,6 +74,21 @@ def pie_chart(col_fracs, col_lab, size = (20,8)):
     temp_df = pd.crosstab(col_lab, col_fracs, dropna=False)
     temp_df.plot(kind = 'pie',subplots = True, figsize = size,autopct='%.2f')
 
+def gb_emp_hist(df,col,xlim = (0,30), bin=20):
+    '''
+    generate a histgraph, to visualize the distribution of certain feature within each employment group
+    :param df: dataframe
+    :param col: string, feature name
+    :param bin: bin size
+    :param xlimi: tuple, limit of x-axis
+    :return: histgraph
+    '''
+    temp = df[['employed',col]]
+    temp[temp.employed ==True][col].hist(alpha = 0.4,bins = bin,color = 'green',label = 'employed',normed = True)
+    temp[temp.employed ==False][col].hist(alpha =0.4,bins = bin,color = 'blue', label = 'umployed',normed = True)
+    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.xlim(xlim)
+    plt.xlabel(df[col].name)
 
 def z_test(df,two_tail = False):
     '''
@@ -144,6 +162,7 @@ def check_impute(df, col_lis, target_col, bs_lis):
         p_val = ttest_by(target_col,pd.isnull(temp))[1]
         dict[col] = p_val
     return dict
+
 
 
 
