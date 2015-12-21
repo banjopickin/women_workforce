@@ -5,6 +5,7 @@ This script aims to clean excel files downloaded from GSS.
 import pandas as pd
 import numpy as np
 from collections import defaultdict
+import re
 
 def extract_variables(filedir):
     '''
@@ -76,3 +77,37 @@ def sub_impute(col,sub_bs, bs_lis):
     med = temp1.median()
     temp2 = col.replace(sub_bs,med)
     return temp2
+
+def extr_val_labels(filedir):
+    '''
+    extract value labels from sps file
+    :param filedir: sps file directory
+    :return: dictonary of dictionaries. keys are columns names. inside of subdictionary, keys are labels,
+    values are numbers
+    '''
+    with open('data/survey/GSS.sps') as f:
+        content = f.readlines()
+    for c in content:
+        if c.strip()=='VALUE LABELS':
+            ind = content.index(c)+1
+    lis = []
+    for i in xrange(ind,len(content)-2):
+        if content[i].strip().strip('/').strip()[0].isalpha()==True:
+            lis.append(i)
+
+    x = [(lis[i],lis[i+1]) for i in xrange(len(lis)-1) ]
+    x.append((lis[-1],len(content)-3))
+
+    d = {}
+    for i in x:
+        a = content[i[0]:i[1]]
+        d[a[0].strip().strip("/").strip().lower()] = a[1:]
+
+    d3 = {}
+    for k,v in d.iteritems():
+        d2 = defaultdict(int)
+        for i in v:
+            text = " ".join(i.strip().split()[1:])
+            d2[re.findall('"([^"]*)"', text)[0]] = int(i.strip().split()[0])
+            d3[k] = d2
+    return d3

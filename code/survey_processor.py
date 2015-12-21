@@ -20,7 +20,7 @@ class survey(object):
         Survey data processor
         :param dir: directory to folder which contains all the survey package
         :initiate: data folder, raw data, EDA data,
-                   list columns to drop, list rows to filter
+                   list columns to drop, list rows to filter,list numeric columns,
                    columns contain survey questions, columns to impute,
                    columns to partially impute, list of "empty answers" such as "Not applicable"
                    "Don't know", "No answer".
@@ -30,7 +30,7 @@ class survey(object):
         self.data = self.raw_data.copy(deep= True)
         self.cols_drop = ['babies','preteen','wrkstat','sphrs2']
         self.row_drop = ['babies','preteen']
-        self.survey_cols = ['age','degree', 'mawrkgrw', 'incom16', 'natspac',
+        self.survey_cols = ['degree', 'mawrkgrw', 'incom16', 'natspac',
                             'nateduc','natarms', 'natfare', 'natsoc',
                             'natpark', 'natfarey', 'eqwlth','colath',
                             'colcom', 'spkhomo', 'affrmact', 'wrkwayup',
@@ -39,7 +39,8 @@ class survey(object):
                             'richwork', 'class_', 'satfin','finrela', 'getahead',
                             'kidssol', 'fepol', 'fechld', 'fepresch','fefam',
                             'helpsick', 'discaff', 'fejobaff', 'discaffm',
-                            'discaffw', 'goodlife', 'meovrwrk', 'realinc', 'employed']
+                            'discaffw', 'goodlife', 'meovrwrk', 'employed']
+        self.num_cols = ['age','realinc']
         self.impute_cols = ['sphrs1','agekdbrn']
         self.par_impute_cols = ['maeduc','paeduc','speduc']
         self.bs = ['Not applicable', "Don't know",'No answer']
@@ -142,7 +143,7 @@ class survey(object):
         #partially impute columns
         par_imp_cols = self._partial_impute_bin()
         #generate final data
-        self.data = pd.concat([impt_cols,par_imp_cols,df[self.survey_cols]], axis=1)
+        self.data = pd.concat([impt_cols,par_imp_cols,df[self.num_cols],df[self.survey_cols]], axis=1)
         self._further_process()
 
     def _further_process(self):
