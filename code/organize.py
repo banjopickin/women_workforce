@@ -89,20 +89,20 @@ def extr_val_labels(filedir):
         content = f.readlines()
     for c in content:
         if c.strip()=='VALUE LABELS':
-            ind = content.index(c)+1
+            ind = content.index(c)+1        #find the started line
     lis = []
     for i in xrange(ind,len(content)-2):
-        if content[i].strip().strip('/').strip()[0].isalpha()==True:
+        if content[i].strip().strip('/').strip()[0].isalpha()==True:      #find the line started a new variable
             lis.append(i)
-
+    #mark the lines between two variables
     x = [(lis[i],lis[i+1]) for i in xrange(len(lis)-1) ]
     x.append((lis[-1],len(content)-3))
-
+    # extract the content between two variables
     d = {}
     for i in x:
         a = content[i[0]:i[1]]
         d[a[0].strip().strip("/").strip().lower()] = a[1:]
-
+    # make them into dictionary
     d3 = {}
     for k,v in d.iteritems():
         d2 = defaultdict(int)

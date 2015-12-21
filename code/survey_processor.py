@@ -124,18 +124,28 @@ class survey(object):
                 a[col + "_dn_kwn"] = a[col] == -98                          #flag with -98
         return a
 
+    def _further_process(self):
+        '''
+        further process data. convert numeric feautre to float type. Then dummie survey questions.
+        :raise: final data frame
+        '''
+        df = self.data.copy()
+        df.age = df.age.astype('float')
+        self.fin_data = pd.get_dummies(df)
 
-    def processor(self):
+
+    def cat_processor(self):
         '''
         1. rough process
         2. impute impute columns
         3. impute par_impute_cols partially
-        4. concatenate with survey columns
+        4. concatenate with dummie survey columns
         :raise:
         1. self.data: can be used for  EDA
         2. self.fin_data: final data frame. This data frame can be used for random forest or any decision tree models
         '''
         # rough process
+        self.data = self.raw_data.copy()
         self._rough_process()
         df = self.data
         #impute columns
@@ -146,13 +156,39 @@ class survey(object):
         self.data = pd.concat([impt_cols,par_imp_cols,df[self.num_cols],df[self.survey_cols]], axis=1)
         self._further_process()
 
-    def _further_process(self):
+
+    def _num_process(self):
         '''
-        further process data. convert numeric feautre to float type. Then dummie survey questions.
-        :raise: final data frame
+        convert categorical variables into numerical variables
+        :raise:
         '''
         df = self.data.copy()
-        df.age = df.age.astype('float')
-        self.fin_data = pd.get_dummies(df)
+        s = self.survey_cols
+        dictn = extr_val_labels(self.dir + '/GSS.sps')
+        for col in s[:-1]:
+            df[col] = df[col].apply(lambda x:dictn[col][x])
+        return df
+
+
+    def num_processor(self):
+        '''
+        1. rough process
+        2. impute impute columns
+        3. impute par_impute_cols partially
+        4. concatenate with numeircal survey columns
+        :raise:
+        1. self.data: can be used for  EDA
+        2. self.fin_data: final data frame. This data frame can be used for random forest or any decision tree models
+        '''
+        self.data = self.raw_data.copy()
+        self._rough_process()
+        #impute columns
+        impt_cols = self._impute_cols()
+        #partially impute columns
+        par_imp_cols = self._partial_impute_bin()
+        #generate final data
+        self.data = pd.concat([impt_cols,par_imp_cols,self.data[self.num_cols],self.data[self.survey_cols]], axis=1)
+        self.data.age = self.data.age.astype('float')
+        self.fin_data = self._num_process()
 
 
