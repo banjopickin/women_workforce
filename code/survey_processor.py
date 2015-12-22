@@ -86,7 +86,6 @@ class survey(object):
         4. drop columns
         :return: none
         '''
-
         self._simp_var()
         self._filter()
         self._employ()

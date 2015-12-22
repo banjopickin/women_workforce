@@ -30,18 +30,9 @@ class survey(object):
         self.data = self.raw_data.copy(deep= True)
         self.cols_drop = ['babies','preteen','wrkstat','sex']
         self.row_drop = ['babies','preteen']
-        self.survey_cols = ['degree', 'mawrkgrw', 'incom16', 'natspac',
-                            'nateduc','natarms', 'natfare', 'natsoc',
-                            'natpark', 'natfarey', 'eqwlth','colath',
-                            'colcom', 'spkhomo', 'affrmact', 'wrkwayup',
-                            'hapmar','helpful', 'conbus', 'coneduc', 'conlabor',
-                            'thnkself','workhard', 'helpoth', 'satjob',
-                            'richwork', 'class_', 'satfin','finrela', 'getahead',
-                            'kidssol', 'fepol', 'fechld', 'fepresch','fefam',
-                            'helpsick', 'discaff', 'fejobaff', 'discaffm',
-                            'discaffw', 'goodlife', 'meovrwrk', 'employed']
-        self.num_cols = ['age','coninc']
-        #self.impute_cols = ['sphrs1','agekdbrn']
+
+        self.num_cols = ['sphrs1','age','agekdbrn','maeduc','paeduc','speduc','chldidel','coninc']
+
         self.impute_cols = ['maeduc','paeduc','speduc']
         self.bs = ['Not applicable', "Don't know",'No answer',"Dk,na","As many as want",'Seven+']
 
@@ -75,7 +66,6 @@ class survey(object):
         employed = ['Working fulltime', 'Working parttime']
         self.data['employed'] = self.data.wrkstat.apply(lambda x: x in employed)
 
-
     def _rough_process(self):
         '''
         roughly process raw data, and will pass it to final process
@@ -99,43 +89,19 @@ class survey(object):
         impute numeric columns with median
         :return: data frame
         '''
-        df = pd.DataFrame()
         for col in self.impute_cols:
-            df[col] = impute_median(self.data[col], self.bs)
-        return df
+            self.fin_data[col] = impute_median(self.data[col], self.bs)
 
-
-    def _further_process(self):
+    def _flag_process(self):
         '''
-        further process data. convert numeric feautre to float type. Then dummie survey questions.
-        :raise: final data frame
+        create dummie variables for bs strings, and replace dummie strings with big numbers
+        :return:
         '''
-        df = self.data.copy()
-        df.age = df.age.astype('float')
-        self.fin_data = pd.get_dummies(df)
-
-
-    def cat_processor(self):
-        '''
-        1. rough process
-        2. impute impute columns
-        3. impute par_impute_cols partially
-        4. concatenate with dummie survey columns
-        :raise:
-        1. self.data: can be used for  EDA
-        2. self.fin_data: final data frame. This data frame can be used for random forest or any decision tree models
-        '''
-        # rough process
-        self.data = self.raw_data.copy()
-        self._rough_process()
-        df = self.data
-        #impute columns
-        impt_cols = self._impute_cols()
-        #partially impute columns
-        par_imp_cols = self._partial_impute_bin()
-        #generate final data
-        self.data = pd.concat([impt_cols,par_imp_cols,df[self.num_cols],df[self.survey_cols]], axis=1)
-        self._further_process()
+        colis = ['sphrs1','age','agekdbrn','chldidel']
+        for c in colis:
+            for b in self.bs:
+                self.fin_data[c+'_'+b]= self.fin_data[c].apply(lambda x:x==b)
+            self.fin_data[c].replace(self.bs,[98,97,96,95,94,93],inplace = True)
 
 
     def _num_process(self):
@@ -143,12 +109,12 @@ class survey(object):
         convert categorical variables into numerical variables
         :raise:
         '''
-        df = self.data.copy()
-        s = self.survey_cols
+
+        self.sv_cols = set(self.data.columns) - set(self.num_cols)-set(['employed'])
         dictn = extr_val_labels(self.dir + '/GSS.sps')
-        for col in s[:-1]:
-            df[col] = df[col].apply(lambda x:dictn[col][x])
-        return df
+        for col in self.sv_cols:
+            self.fin_data[col] = self.fin_data[col].apply(lambda x:dictn[col][x])
+
 
 
     def num_processor(self):
@@ -161,13 +127,17 @@ class survey(object):
         1. self.data: can be used for  EDA
         2. self.fin_data: final data frame. This data frame can be used for random forest or any decision tree models
         '''
-        self.data = self.raw_data.copy()
         self._rough_process()
-        #impute columns
-        impt_cols = self._impute_cols()
+        #generate final data frame
+        self.fin_data = self.data.copy()
+
         #generate final data
-        self.data = pd.concat([impt_cols,self.data[self.num_cols],self.data[self.survey_cols]], axis=1)
-        self.data.age = self.data.age.astype('float')
-        self.fin_data = self._num_process()
+        self._impute_cols()
+        #flag
+        self._flag_process()
+        #num_process
+        self._num_process()
+        #convert num_cols to float
+        self.fin_data[self.num_cols] = self.fin_data[self.num_cols].astype('float')
 
 
