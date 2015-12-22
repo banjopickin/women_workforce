@@ -6,6 +6,7 @@ import pandas as pd
 import numpy as np
 from collections import defaultdict
 import re
+import pdb
 
 def extract_variables(filedir):
     '''
@@ -85,11 +86,12 @@ def extr_val_labels(filedir):
     :return: dictonary of dictionaries. keys are columns names. inside of subdictionary, keys are labels,
     values are numbers
     '''
-    with open('data/survey/GSS.sps') as f:
+    with open(filedir) as f:
         content = f.readlines()
     for c in content:
         if c.strip()=='VALUE LABELS':
-            ind = content.index(c)+1        #find the started line
+            ind = content.index(c)+1   #find the started line
+    #pdb.set_trace()
     lis = []
     for i in xrange(ind,len(content)-2):
         if content[i].strip().strip('/').strip()[0].isalpha()==True:      #find the line started a new variable

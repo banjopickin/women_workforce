@@ -134,7 +134,7 @@ def check_bs(col,bs_lis):
     '''
     Check numeric variables. count the number of observations labeled as "no answer", "not applicable" or "don't know"
     visualize the proportation of each "bs" label within bs subgroup.
-    :param col: numeric feature
+    :param col: numeric feature, panda series
     :param bs_lis: list of stirng
     :raise: float (raotio of observations in bs subgroup), int(number of observations in bs subgroup),
              bar graph to show the number of each bs word
@@ -152,7 +152,7 @@ def check_impute(df, col_lis, target_col, bs_lis):
     or impute with mean or median.
     :param df: data fame
     :param col_lis: string list contains numeric column names
-    :param target_col: column for t-test
+    :param target_col: column for t-test, panda series
     :param bs_lis: bs list, list of string
     :return: dictionary. keys: column name. value: p-value
     '''
