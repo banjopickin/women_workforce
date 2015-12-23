@@ -28,7 +28,7 @@ class survey(object):
         self.dir = dir
         self.raw_data = pd.read_excel(dir + '/GSS.xls')
         self.data = self.raw_data.copy(deep= True)
-        self.cols_drop = ['babies','preteen','wrkstat','sex']
+        self.cols_drop = ['babies','preteen','wrkstat']
         self.row_drop = ['babies','preteen']
 
         self.num_cols = ['sphrs1','age','agekdbrn','maeduc','paeduc','speduc','chldidel','coninc']
