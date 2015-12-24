@@ -38,10 +38,10 @@ def simple_bar(col, size = (8,8)):
 def v_bar(colx,coly,size = (8,8)):
     '''
     create a stacked bar chart. percentiled
-    :param colx: varialbes show on x-axis
-    :param coly: variables counts show on y-axis
+    :param colx: variables show on x-axis, panda series
+    :param coly: variables counts show on y-axis, panda series
     :param size: figure size
-    :output: stacked  bar chart
+    :output: bar chart
     '''
     temp = pd.crosstab(colx,coly,dropna=False)
     t = temp.apply(lambda x: x/x.sum(), axis = 1)
@@ -54,7 +54,7 @@ def h_bar(col_group,col_split, size = (8,8)):
     create a unstack horizontal bar chart.original number, not percentiled
     :param colx: varialbes to group
     :param coly: variables to split within each group
-    :param size: figsize
+    :param size: figure size
     :output: horizontal bar chart
     '''
     temp = pd.crosstab(col_group,col_split,dropna=False)
@@ -84,8 +84,8 @@ def gb_emp_hist(df,col,xlim = (0,30), bin=20):
     :return: histgraph
     '''
     temp = df[['employed',col]]
-    temp[temp.employed ==True][col].hist(alpha = 0.4,bins = bin,color = 'green',label = 'employed',normed = True)
-    temp[temp.employed ==False][col].hist(alpha =0.4,bins = bin,color = 'blue', label = 'umployed',normed = True)
+    temp[temp.employed == True][col].hist(alpha = 0.4,bins = bin,color = 'green',label = 'employed',normed = True)
+    temp[temp.employed == False][col].hist(alpha =0.4,bins = bin,color = 'blue', label = 'umployed',normed = True)
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
     plt.xlim(xlim)
     plt.xlabel(df[col].name)
