@@ -1,6 +1,9 @@
 '''
 This document contains handy funcitons to visualize model computation results
 '''
+
+from __future__ import division
+import pandas as pd
 from sklearn.metrics import confusion_matrix, roc_auc_score, roc_curve
 import numpy as np
 import matplotlib.pylab as plt
@@ -184,3 +187,61 @@ def cluster_plot(X,n_clusters):
 
     ax1.set_yticks([])  # Clear the yaxis labels / ticks
     ax1.set_xticks([-0.1, 0, 0.2, 0.4, 0.6, 0.8, 1])
+
+
+def km_emp_mean(df_pca,krange,empcol,crtcol):
+    '''
+    apply kmeans to pca-processed dataframe, with a range of k. Then check with k yields clearest employed rate
+    and correct rate.
+    :param df_pca: numpy array
+    :param krange: int, range of k
+    :param empcol: panda series
+    :param crtcol: panda series
+    :return: string, data frame
+    '''
+    lis = []
+    df = pd.concat([empcol,crtcol],axis=1)
+    for k in xrange(5,krange):
+        km = KMeans(n_clusters=k)
+        km.fit(df_pca)
+        df['cluster'] = km.labels_
+        temp = df.groupby('cluster').agg(np.mean)
+        res = temp[(temp['employed'] >0.7) | (temp['employed'] < 0.4) &(temp['correct'] >0.7) ]
+        print "{} clusters".format(k)
+        print res
+        print "---"
+        print "{} out of {} clusters split the target ideally. rate: {}".format(res.shape[0],k,res.shape[0]/k)
+        print '*'*20
+        lis.append(res.shape[0]/k)
+    plt.plot(range(5,krange),lis)
+    plt.xlabel('K')
+    plt.ylabel('ideally-split-ratio')
+
+
+# def km_emp(df_pca,krange,empcol,crtcol):
+#     '''
+#     apply kmeans to pca-processed dataframe, with a range of k. Then check with k yields clearest employed rate
+#     and correct rate.
+#     :param df_pca: numpy array
+#     :param krange: int, range of k
+#     :param empcol: panda series
+#     :param crtcol: panda series
+#     :return: plot
+#     '''
+#     lisT = []
+#     lisF = []
+#     df = pd.concat([empcol,crtcol],axis=1)
+#     for k in xrange(5,krange):
+#         km = KMeans(n_clusters=k)
+#         km.fit(df_pca)
+#         df['cluster'] = km.labels_
+#         temp = df.groupby('cluster').agg(np.mean)
+#         resT = temp[(temp['employed'] >0.7)) &(temp['correct'] >0.7) ]
+#         resF = temp[(temp['employed'] < 0.4) &(temp['correct'] >0.7) ]
+#         lisT.append(resT.shape[0])
+#         lisF.append(resF.shape[0])
+#     plt.plot(range(5,krange),lisT,lw = 2, label = 'employed')
+#     plt.plot(range(5,krange),lisF, lw = 2, label = 'unemployed')
+#     plt.legend
+#     plt.xlabel('K')
+#
