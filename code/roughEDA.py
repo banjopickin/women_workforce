@@ -58,7 +58,6 @@ def h_bar(col_group,col_split, size = (8,8)):
     :output: horizontal bar chart
     '''
     temp = pd.crosstab(col_group,col_split,dropna=False)
-    #t = temp.apply(lambda x: x/x.sum(), axis = 1)
     temp.plot(kind = 'barh', figsize = size)
     plt.legend(title =col_group.name, loc='center left', bbox_to_anchor=(1, 0.5))
 
