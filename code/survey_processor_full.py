@@ -115,6 +115,13 @@ class survey(object):
         for col in self.sv_cols:
             self.fin_data[col] = self.fin_data[col].apply(lambda x:dictn[col][x])
 
+    def _feature_engineering(self):
+        '''
+        feature engineering, combine maeduc, paeduc, speduc, and take average
+        :return:
+        '''
+        self.fin_data['educom'] = self.fin_data[self.impute_cols].sum(axis = 1)/3
+        self.fin_data.drop(self.impute_cols,axis = 1, inplace = True)
 
 
     def num_processor(self):
@@ -130,7 +137,6 @@ class survey(object):
         self._rough_process()
         #generate final data frame
         self.fin_data = self.data.copy()
-
         #generate final data
         self._impute_cols()
         #flag
@@ -139,5 +145,8 @@ class survey(object):
         self._num_process()
         #convert num_cols to float
         self.fin_data[self.num_cols] = self.fin_data[self.num_cols].astype('float')
+        # feature engineering
+        self._feature_engineering()
+
 
 
