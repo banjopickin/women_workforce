@@ -193,16 +193,17 @@ def km_emp_mean(df_pca,krange,empcol,crtcol):
     '''
     apply kmeans to pca-processed dataframe, with a range of k. Then check with k yields clearest employed rate
     and correct rate.
+    plot total number of k against good cluster ratio
     :param df_pca: numpy array
     :param krange: int, range of k
     :param empcol: panda series
     :param crtcol: panda series
-    :return: string, data frame
+    :raise: string, data frame, and plot
     '''
     lis = []
     df = pd.concat([empcol,crtcol],axis=1)
     for k in xrange(5,krange):
-        km = KMeans(n_clusters=k)
+        km = KMeans(n_clusters=k,random_state=0)
         km.fit(df_pca)
         df['cluster'] = km.labels_
         temp = df.groupby('cluster').agg(np.mean)
@@ -210,12 +211,12 @@ def km_emp_mean(df_pca,krange,empcol,crtcol):
         print "{} clusters".format(k)
         print res
         print "---"
-        print "{} out of {} clusters split the target ideally. rate: {}".format(res.shape[0],k,res.shape[0]/k)
+        print "{} out of {} clusters split the target ideally. Good cluster rate: {}".format(res.shape[0],k,res.shape[0]/k)
         print '*'*20
         lis.append(res.shape[0]/k)
-    plt.plot(range(5,krange),lis)
+    plt.plot(range(5,krange),lis,lw = 2)
     plt.xlabel('K')
-    plt.ylabel('ideally-split-ratio')
+    plt.ylabel('good cluster rate')
 
 
 # def km_emp(df_pca,krange,empcol,crtcol):
