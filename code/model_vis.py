@@ -202,7 +202,7 @@ def km_emp_mean(df_pca,krange,empcol,crtcol):
     '''
     lis = []
     df = pd.concat([empcol,crtcol],axis=1)
-    for k in xrange(2,krange):
+    for k in xrange(4,krange):
         km = KMeans(n_clusters=k,random_state=0)
         km.fit(df_pca)
         df['cluster'] = km.labels_
@@ -214,9 +214,10 @@ def km_emp_mean(df_pca,krange,empcol,crtcol):
         print "{} out of {} clusters split the target ideally. Good cluster rate: {}".format(res.shape[0],k,res.shape[0]/k)
         print '*'*20
         lis.append(res.shape[0]/k)
-    plt.plot(range(2,krange),lis,lw = 2)
+    plt.plot(range(4,krange),lis,lw = 2)
     plt.xlabel('K')
     plt.ylabel('good cluster rate')
+    plt.ylim(0,1.2)
 
 
 def km_emp(df_pca,krange,empcol,crtcol):
@@ -232,16 +233,16 @@ def km_emp(df_pca,krange,empcol,crtcol):
     lisT = []
     lisF = []
     df = pd.concat([empcol,crtcol],axis=1)
-    for k in xrange(5,krange):
+    for k in xrange(2,krange):
         km = KMeans(n_clusters=k)
         km.fit(df_pca)
         df['cluster'] = km.labels_
         temp = df.groupby('cluster').agg(np.mean)
         resT = temp[(temp['employed'] >0.7) &(temp['correct'] >0.7) ]
         resF = temp[(temp['employed'] < 0.4) &(temp['correct'] >0.7) ]
-        lisT.append(resT.shape[0])
-        lisF.append(resF.shape[0])
-    plt.plot(range(5,krange),lisT,lw = 2, label = 'employed')
-    plt.plot(range(5,krange),lisF, lw = 2, label = 'unemployed')
+        lisT.append(resT.shape[0]/k)
+        lisF.append(resF.shape[0]/k)
+    plt.plot(range(2,krange),lisT,lw = 2, label = 'employed')
+    plt.plot(range(2,krange),lisF, lw = 2, label = 'unemployed')
     plt.legend()
     plt.xlabel('K')
