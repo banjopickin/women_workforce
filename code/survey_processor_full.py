@@ -101,7 +101,7 @@ class survey(object):
         for c in colis:
             for b in self.bs:
                 self.fin_data[c+'_'+b]= self.fin_data[c].apply(lambda x:x==b)
-            self.fin_data[c].replace(self.bs,[98,97,96,95,94,93],inplace = True)
+            self.fin_data[c].replace(self.bs,[98,97,96,9,8,7],inplace = True)
 
 
     def _num_process(self):
