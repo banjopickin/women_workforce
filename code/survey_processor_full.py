@@ -110,7 +110,7 @@ class survey(object):
         :raise:
         '''
 
-        self.sv_cols = set(self.data.columns) - set(self.num_cols)-set(['employed'])
+        self.sv_cols = list(set(self.data.columns) - set(self.num_cols)-set(['employed']))
         dictn = extr_val_labels(self.dir + '/GSS.sps')
         for col in self.sv_cols:
             self.fin_data[col] = self.fin_data[col].apply(lambda x:dictn[col][x])
@@ -122,6 +122,8 @@ class survey(object):
         '''
         self.fin_data['educom'] = self.fin_data[self.impute_cols].sum(axis = 1)/3
         self.fin_data.drop(self.impute_cols,axis = 1, inplace = True)
+        self.num_cols = [x for x in self.num_cols if x not in self.impute_cols]
+        self.num_cols.append('educom')
 
 
     def num_processor(self):
