@@ -35,6 +35,7 @@ class survey(object):
 
         self.impute_cols = ['maeduc','paeduc','speduc']
         self.bs = ['Not applicable', "Don't know",'No answer',"Dk,na","As many as want",'Seven+']
+        self.bs_flag = [98,97,96,9,8,7]
 
 
 
@@ -101,7 +102,7 @@ class survey(object):
         for c in colis:
             for b in self.bs:
                 self.fin_data[c+'_'+b]= self.fin_data[c].apply(lambda x:x==b)
-            self.fin_data[c].replace(self.bs,[98,97,96,9,8,7],inplace = True)
+            self.fin_data[c].replace(self.bs,self.bs_flag,inplace = True)
 
 
     def _num_process(self):
