@@ -64,6 +64,8 @@ def rank_2nd(col):
 
 def cluster_summary(df,catcols):
     summary = pd.DataFrame()
-    summary['rank_first'] = df[catcols].apply(lambda x: rank_1st(x))
-    summary['rank_second'] = df[catcols].apply(lambda x: rank_2nd(x))
+    summary['rank_first_v'] = df[catcols].apply(lambda x: rank_1st(x)[0])
+    summary['rank_first_p'] = df[catcols].apply(lambda x: rank_1st(x)[1])
+    summary['rank_second_v'] = df[catcols].apply(lambda x: rank_2nd(x)[0])
+    summary['rank_second_p'] = df[catcols].apply(lambda x: rank_2nd(x)[1])
     return summary
