@@ -56,8 +56,11 @@ def rank_1st(col):
 
 def rank_2nd(col):
     dict = OrderedDict(sorted(Counter(col).items(), key=lambda x: x[1], reverse=True))
-    x = dict.items()[1]
-    return x[0], round(x[1] / sum(dict.values()), 2)
+    if len(dict) ==1:
+        return "not apply"
+    else:
+        x = dict.items()[1]
+        return x[0], round(x[1] / sum(dict.values()), 2)
 
 def cluster_summary(df,catcols):
     summary = pd.DataFrame()
