@@ -7,6 +7,15 @@ import pandas as pd
 import numpy as np
 from collections import Counter, OrderedDict
 
+def flag_rm_mean(col,bs_flag):
+    '''
+    remove flags to calculate mean value of the column
+    :param col: panda series, column to take mean
+    :param bs_flag: list of integer. flag numbers
+    :return: float, mean of the columns
+    '''
+    temp_col = col.replace(bs_flag,np.nan)
+    return round(temp_col.mean(),2)
 
 def sort_feature_means(df, topn):
     '''
