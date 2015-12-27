@@ -15,7 +15,7 @@ def sort_feature_means(df, topn):
     :param topn: int, top n contributed features to show
     :return: numpy array. top n contributed features and their feature contribution values
     '''
-    df = df.drop(['employed', 'correct'], axis=1)  # drop employed and correct columns
+    df = df.drop(['employed', 'correct','cluster'], axis=1)  # drop employed and correct columns
     m = df.mean(axis=0).values
     s = sorted(zip(m, df.columns), key=lambda x: abs(x[0]), reverse=True)
     return s[:topn]
@@ -61,14 +61,6 @@ def rank_2nd(col):
 
 def cluster_summary(df,catcols):
     summary = pd.DataFrame()
-    summary['first'] = df[catcols].apply(lambda x: rank_1st(x))
-    summary['second'] = df[catcols].apply(lambda x: rank_2nd(x))
+    summary['rank_first'] = df[catcols].apply(lambda x: rank_1st(x))
+    summary['rank_second'] = df[catcols].apply(lambda x: rank_2nd(x))
     return summary
-
-
-    #
-    # first = df[catcols].apply(lambda x: rank_1st(x))
-    # second = df[catcols].apply(lambda x: rank_2nd(x))
-    # summary = pd.DataFrame(pd.concat([first,second],axis =1))
-    # summary.columns = ['first','second']
-    # return summary
