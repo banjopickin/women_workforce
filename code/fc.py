@@ -92,21 +92,6 @@ def mode_answer_cat(col):
 
 
 
-
-
-def percent(col):
-    '''
-    extract most frequent answer return its percentage
-    :param col: panda series
-    :return: float
-    '''
-    dict = OrderedDict(sorted(Counter(col).items(), key=lambda x: x[1], reverse=True))
-    x = dict.items()[0]
-    if x[0] in ['Not acpplicable', 98]:
-        x = dict.items()[1]
-    return round(x[1] / sum(dict.values()), 2)
-
-
 def drop_feature(df):
     '''
     drop the features have same value across all the clusters
@@ -118,6 +103,35 @@ def drop_feature(df):
         if temp[col].nunique()==1:
             temp.drop(col,axis =1,inplace =True)
     return temp
+
+
+def cosine_distance(x,y):
+    '''
+    cosine distance
+    :param x: numpy array
+    :param y: numpy array
+    :return: float
+    '''
+    dist_x = np.sqrt(sum(x**2))
+    dist_y = np.sqrt(sum(y**2))
+    in_prod = sum(x*y)
+    sim = in_prod/(dist_x*dist_y)
+    return 1-sim
+
+def df_cosine_dist(df):
+    '''
+    apply cosine distance to matrix columns. Find out which columns are similar and which differ a lot.
+    :param df: pandas data frame
+    :return: ordered dictionary. keys are column name tuple, values are float
+    '''
+    cols = list(df.columns)
+    d = {}
+    for i,j in enumerate(cols):
+        for x in xrange(i+1,len(cols)):
+            d[(j,cols[x])] = round(cosine_distance(df[j],df[cols[x]]),2)
+    return OrderedDict(sorted(d.items(),key = lambda x: x[1]))
+
+
 
 def rank_1st(col):
     '''
