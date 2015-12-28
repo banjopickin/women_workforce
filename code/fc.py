@@ -7,7 +7,19 @@ import pandas as pd
 import numpy as np
 from collections import Counter, OrderedDict
 
-def flag_rm_mean(col,bs_flag):
+def flag_rm_median(col,bs_flag,):
+    '''
+    remove flags to calculate median value of the column
+    :param col: panda series, column to take median
+    :param bs_flag: list of integer. flag numbers
+    :return: float, median of the columns
+    '''
+    temp_col = col.replace(bs_flag,np.nan)
+    return round(temp_col.median(),2)
+
+
+
+def flag_rm_mean(col,bs_flag,):
     '''
     remove flags to calculate mean value of the column
     :param col: panda series, column to take mean
@@ -16,6 +28,24 @@ def flag_rm_mean(col,bs_flag):
     '''
     temp_col = col.replace(bs_flag,np.nan)
     return round(temp_col.mean(),2)
+
+
+def df_num(df):
+    '''
+    groupby cluster id then summarise numerical columns by taking means or medians
+    :param df: data frame, survey data
+    :return: data frame
+    '''
+    df_n = pd.DataFrame()
+    df_n['sphrs1'] = df.groupby('cluster')['sphrs1'].apply(lambda x: flag_rm_median(x,[98]))
+    df_n['chldidel'] = df.groupby('cluster')['chldidel'].apply(lambda x: flag_rm_median(x,[98,9]))
+    median_cols = ['age','agekdbrn','coninc']
+    for col in median_cols:
+        df_n[col] = df.groupby('cluster')[col].apply(lambda x: np.median(x))
+    df_n['educom'] = df.groupby('cluster')['educom'].apply(lambda x: np.mean(x))
+    return df_n.applymap(lambda x: round(x,2))
+
+
 
 def sort_feature_means(df, topn):
     '''
@@ -38,6 +68,8 @@ def mode_answer(col):
     '''
     dict = OrderedDict(sorted(Counter(col).items(), key=lambda x: x[1], reverse=True))
     x = dict.items()[0]
+    if x[0] == "Not applicable":
+        x = dict.items()[1]
     return x[0]
 
 
@@ -49,6 +81,8 @@ def percent(col):
     '''
     dict = OrderedDict(sorted(Counter(col).items(), key=lambda x: x[1], reverse=True))
     x = dict.items()[0]
+    if x[0] in ['Not acpplicable', 98]:
+        x = dict.items()[1]
     return round(x[1] / sum(dict.values()), 2)
 
 
