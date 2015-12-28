@@ -75,7 +75,7 @@ def mode_answer(col):
             return x[0]
         else:
             x = dict.items()[1]
-            return x[0]
+    return x[0]
 
 
 def mode_answer_cat(col):
