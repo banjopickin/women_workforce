@@ -17,6 +17,7 @@ class FeatureContribution(object):
         :return:
         '''
         self.fc_df = pd.read_pickle(dir)
+        self.features = [i for i in self.fc_df.columns if i not in ['correct','cluster']]
 
     def pca(self,n_com):
         '''
@@ -37,6 +38,7 @@ class FeatureContribution(object):
         '''
         km = KMeans(n_clusters=n_cluster,random_state=0)
         km.fit(self.fc_pca)
+        self.cluster_id = km.labels_
         return km.labels_
 
     def cluster_processor(self,n_com,n_cluster):

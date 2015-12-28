@@ -70,12 +70,28 @@ def mode_answer(col):
     x = dict.items()[0]
     if isinstance(x[0],bool):
         return x[0]
-    if x[0] in ["Not applicable",0]:
+    if x[0] in [0,98]:
         if len(dict)==1:
             return x[0]
         else:
             x = dict.items()[1]
             return x[0]
+
+
+def mode_answer_cat(col):
+    '''
+
+    :param df:
+    :return:
+    '''
+    dict = OrderedDict(sorted(Counter(col).items(), key=lambda x: x[1], reverse=True))
+    x = dict.items()[0]
+    if x[0] =='Not applicable':
+        x = dict.items()[1]
+    return x[0]
+
+
+
 
 
 def percent(col):
