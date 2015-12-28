@@ -68,9 +68,14 @@ def mode_answer(col):
     '''
     dict = OrderedDict(sorted(Counter(col).items(), key=lambda x: x[1], reverse=True))
     x = dict.items()[0]
-    if x[0] == "Not applicable":
-        x = dict.items()[1]
-    return x[0]
+    if isinstance(x[0],bool):
+        return x[0]
+    if x[0] in ["Not applicable",0]:
+        if len(dict)==1:
+            return x[0]
+        else:
+            x = dict.items()[1]
+            return x[0]
 
 
 def percent(col):
@@ -85,6 +90,18 @@ def percent(col):
         x = dict.items()[1]
     return round(x[1] / sum(dict.values()), 2)
 
+
+def drop_feature(df):
+    '''
+    drop the features have same value across all the clusters
+    :param df: data frame
+    :return: data frame
+    '''
+    temp= df.copy()
+    for col in temp.columns:
+        if temp[col].nunique()==1:
+            temp.drop(col,axis =1,inplace =True)
+    return temp
 
 def rank_1st(col):
     '''
