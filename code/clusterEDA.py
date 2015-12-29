@@ -45,7 +45,7 @@ def one_pub_hist(df,cluster_id, variable):
         height=500
     )
     fig = go.Figure(data=data, layout=layout)
-    py.iplot(fig)
+    return fig
 
 
 def one_pub_hist_mat(df,cluster_id, variable,norm = True):
