@@ -54,6 +54,7 @@ def sort_feature_means(df, topn):
     :param topn: int, top n contributed features to show
     :return: numpy array. top n contributed features and their feature contribution values
     '''
+
     df = df.drop(['employed', 'correct','cluster'], axis=1)  # drop employed and correct columns
     m = df.mean(axis=0).values
     s = sorted(zip(m, df.columns), key=lambda x: abs(x[0]), reverse=True)
