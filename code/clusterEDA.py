@@ -8,45 +8,6 @@ import matplotlib.pylab as plt
 import numpy as np
 import pandas as pd
 
-def one_pub_hist(df,cluster_id, variable):
-    '''
-    visualizsing numerical variables. one cluster vs public. use plotly
-    :param df: data frame
-    :param cluster_id: int, cluster id
-    :param variable: string
-    :return: histgram
-    '''
-    x0 = df[variable].values
-    x1 = df[df.cluster== cluster_id][variable].values
-    name1 = "public " + variable
-    name2 = "cluster " + str(cluster_id) + " " + variable
-
-    trace1 = go.Histogram(
-        x=x0,
-        opacity=0.5,
-        name = name1,
-            marker=dict(
-            color= 'rgb(175, 203, 37)'
-        )
-    )
-
-    trace2 = go.Histogram(
-        x=x1,
-        opacity=0.75,
-        name = name2,
-        marker = dict(color = 'rgb(83, 199, 223)'),
-    )
-    data = [trace1, trace2]
-
-    layout = go.Layout(
-        barmode='overlay',
-        autosize=False,  # allow custom size (set already, only for completeness here)
-        width=800,    # link new width value
-        height=500
-    )
-    fig = go.Figure(data=data, layout=layout)
-    return fig
-
 
 def one_pub_hist_mat(df,cluster_id, variable,norm = True):
     '''
@@ -85,3 +46,14 @@ def two_all(df, cluster1, cluster2):
         df[df.cluster == cluster2][col].hist( label = 'cluster '+ str(cluster2), alpha = 0.75, bins = 20, normed = True)
         plt.legend(title = col,loc='center left', bbox_to_anchor=(1, 0.5))
         plt.show()
+
+
+def one_pub_bar(df,cluster_id, variable):
+    '''
+    bar charts, one cluster, public side by side to compare one feature.
+    :param df: data frame
+    :param cluster_id: int, cluster id
+    :param variable: string, column name
+    :return: fig
+    '''
+   
