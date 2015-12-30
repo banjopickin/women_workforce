@@ -48,12 +48,51 @@ def two_all(df, cluster1, cluster2):
         plt.show()
 
 
-def one_pub_bar(df,cluster_id, variable):
+def one_pub_bar(df,cluster_id, variable, size = (10,5)):
     '''
     bar charts, one cluster, public side by side to compare one feature.
     :param df: data frame
     :param cluster_id: int, cluster id
     :param variable: string, column name
+    :param size: tuple, figure size
     :return: fig
     '''
-   
+    df = df.copy()
+    df.replace('Not applicable', np.nan, inplace = True)
+    pub = df[variable].value_counts()
+    one = df[df.cluster==cluster_id][variable].value_counts()
+    index2 = "Cluster_" + str(cluster_id)
+    temp = pd.DataFrame([pub,one],index=['Public', index2])
+    temp = temp.apply(lambda x: x/x.sum(), axis=1)
+    ax = temp.plot(kind = 'bar', width = 0.9, figsize = size)
+    for p in ax.patches:
+        height = p.get_height()
+        ax.text(p.get_x(), height+0.01,'%1.2f'%(height))
+
+    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.show()
+
+
+def one_res_bar(df,cluster_id, variable, size = (10,5)):
+    '''
+    bar charts, one cluster, public side by side to compare one feature.
+    :param df: data frame
+    :param cluster_id: int, cluster id
+    :param variable: string, column name
+    :param size: tuple, figure size
+    :return: fig
+    '''
+    df = df.copy()
+    df.replace('Not applicable', np.nan, inplace = True)
+    res = df[df.cluster!=cluster_id][variable].value_counts()
+    one = df[df.cluster==cluster_id][variable].value_counts()
+    index2 = "Cluster_" + str(cluster_id)
+    temp = pd.DataFrame([res, one],index=["Rest", index2])
+    temp = temp.apply(lambda x: x/x.sum(), axis=1)
+    ax = temp.plot(kind = 'bar', width = 0.9, figsize = size)
+    for p in ax.patches:
+        height = p.get_height()
+        ax.text(p.get_x(), height+0.01,'%1.2f'%(height))
+
+    plt.legend(title = variable, loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.show()
