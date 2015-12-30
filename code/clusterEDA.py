@@ -81,7 +81,8 @@ def one_res_bar(df,cluster_id, variable, size = (10,5)):
     :param cluster_id: int, cluster id
     :param variable: string, column name
     :param size: tuple, figure size
-    :return: fig
+    :return: data frame
+    :raise: bar chart
     '''
     df = df.copy()
     df.replace('Not applicable', np.nan, inplace = True)
@@ -89,14 +90,15 @@ def one_res_bar(df,cluster_id, variable, size = (10,5)):
     one = df[df.cluster==cluster_id][variable].value_counts()
     index2 = "Cluster_" + str(cluster_id)
     temp = pd.DataFrame([res, one],index=["Rest", index2])
-    temp = temp.apply(lambda x: x/x.sum(), axis=1)
-    ax = temp.plot(kind = 'bar', width = 0.9, figsize = size)
+    temp_n = temp.apply(lambda x: x/x.sum(), axis=1)
+    ax = temp_n.T.plot(kind = 'bar', width = 0.9, figsize = size)
     for p in ax.patches:
         height = p.get_height()
         ax.text(p.get_x(), height+0.01,'%1.2f'%(height))
 
     plt.legend(title = variable, loc='center left', bbox_to_anchor=(1, 0.5))
     plt.show()
+    return temp
 
 def two_bar(df, cluster1,cluster2,variable, size = (10,5)):
     '''
@@ -106,7 +108,7 @@ def two_bar(df, cluster1,cluster2,variable, size = (10,5)):
     :param cluster2: int, cluster id
     :param variable: string, column name
     :param size: figure size
-    :return:
+    :return: data frame
     '''
     df = df.copy()
     df.replace('Not applicable',np.nan,inplace = True)
@@ -116,7 +118,7 @@ def two_bar(df, cluster1,cluster2,variable, size = (10,5)):
     index2 = "Cluster_" + str(cluster2)
     temp = pd.DataFrame([c1,c2], index= [index1, index2])
     temp_n = temp.apply(lambda x: x/x.sum(), axis =1)
-    ax = temp_n.plot(kind = 'bar', width = 0.9, figsize = size)
+    ax = temp_n.T.plot(kind = 'bar', width = 0.9, figsize = size)
     for p in ax.patches:
         height = p.get_height()
         ax.text(p.get_x(), height+0.01,'%1.2f'%(height))
@@ -139,23 +141,29 @@ def cluster_ztest(df,answer, two_tail = False):
     pb = vb/nb
     pooled = (va+vb)/(na+nb)
     s = np.sqrt(pooled*(1-pooled)*(1/na+1/nb))
-    z = (pa-pb)/s
+    z = (pb-pa)/s
     if two_tail:
         p = (1 - scs.norm.cdf(abs(z)))*2
     else:
         p = 1- scs.norm.cdf(abs(z))
     return z,p
 
-def cluster_ztest_df(df):
+def cluster_ztest_df(df, bonf = True):
     '''
     conduct z-test, on entire data frame. column by column
     :param df: data frame
+    :param bonf: bool, Bonferroni correction
     :return: lis of tuples
     '''
     lis = []
+    k = df.shape[1]
+    if bonf:
+        K = k*(k-1)/2
+    else:
+        K =1
     for c in df.columns:
-        p = cluster_ztest(df,c)[1]
+        z,p = cluster_ztest(df,c)
         # only return significant ones
-        if p <0.05:
-            lis.append((c,round(p,2)))
-    return sorted(lis, key = lambda x: x[1])
+        if p <0.05/K:
+            lis.append((c,round(z,2), round(p,2)))
+    return sorted(lis, key = lambda x: x[2])
