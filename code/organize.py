@@ -37,7 +37,7 @@ def replace_variables(df,variables):
     '''
     replace the column names with these short label. For convenience, all the labels are converted to lower cases.
     :param df: dataframe
-    :return: new column names
+    :raise: new column names
     '''
     df.columns = [variables[c].lower() for c in df.columns]
 
@@ -46,9 +46,9 @@ def make_bool(df,lis,border, prefix):
     '''
     convert numeric columns into boolean columns
     :param df: dataframe
-    :param lis: list columns to be converted
-    :param border: border number
-    :param prefix: string to concat for new column names
+    :param lis: list of columns to be converted
+    :param border: float, border number
+    :param prefix: string to concatenate for new column names
     :raise: new columns
     '''
     for col in lis:
@@ -59,7 +59,7 @@ def impute_median(col, bs_lis):
     impute strings with column median
     :param col: column, panda series or np.array
     :param bs_lis: string list
-    :return: new column
+    :return: panda series. new column
     '''
     temp = col.replace(bs_lis,np.nan)
     temp.fillna(temp.median(), inplace= True)
@@ -69,8 +69,8 @@ def impute_median(col, bs_lis):
 def sub_impute(col,sub_bs, bs_lis):
     '''
     impute one or two string labels with median
-    :param col: column to impute
-    :param sub_bs: stings in the column to impute
+    :param col: panda series. column to impute
+    :param sub_bs: list of strings in the column to impute
     :param bs_lis: entire bs string list
     :return: sub_imputed column
     '''

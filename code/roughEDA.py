@@ -1,5 +1,5 @@
 '''
-This script contains functions that can be used for basic data exploration analysis
+This script contains functions for basic data exploration analysis
 '''
 from __future__ import division
 import pandas as pd
@@ -15,9 +15,9 @@ plt.style.use('ggplot')
 def simple_bar(col, size = (8,8)):
     '''
     generate a bar-chart to visualize counts of categorical variable
-    :param col: specific column
+    :param col: panda series, specific column
     :param size: figuresize, tuple
-    :output: bar-chart
+    :raise: bar-chart
     '''
     val_counts = col.value_counts(dropna=False)
     labels = val_counts.index
@@ -28,6 +28,7 @@ def simple_bar(col, size = (8,8)):
     rects = ax.bar(ind,values)
     ax.set_xticks(ind + width)
     ax.set_xticklabels(labels)
+     # add number on top of each bar
     for rect in rects:
         height = rect.get_height()
         ax.text(rect.get_x() + rect.get_width()/2., 1.05*height,
@@ -38,10 +39,10 @@ def simple_bar(col, size = (8,8)):
 def v_bar(colx,coly,size = (8,8)):
     '''
     create a stacked bar chart. percentiled
-    :param colx: variables show on x-axis, panda series
-    :param coly: variables counts show on y-axis, panda series
-    :param size: figure size
-    :output: bar chart
+    :param colx: panda series, variables show on x-axis, panda series
+    :param coly: panda series, variables counts show on y-axis, panda series
+    :param size: tuple, figure size
+    :raise: bar chart
     '''
     temp = pd.crosstab(colx,coly,dropna=False)
     t = temp.apply(lambda x: x/x.sum(), axis = 1)
@@ -52,9 +53,9 @@ def v_bar(colx,coly,size = (8,8)):
 def h_bar(col_group,col_split, size = (8,8)):
     '''
     create a unstack horizontal bar chart.original number, not percentiled
-    :param colx: varialbes to group
-    :param coly: variables to split within each group
-    :param size: figure size
+    :param colx: panda series. varialbes to group
+    :param coly: panda series. variables to split within each group
+    :param size: tuple. figure size
     :output: horizontal bar chart
     '''
     temp = pd.crosstab(col_group,col_split,dropna=False)
