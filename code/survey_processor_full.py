@@ -133,6 +133,7 @@ class survey(object):
         2. impute impute columns
         3. impute par_impute_cols partially
         4. concatenate with numeircal survey columns
+        5. feature engineering, combine maeduc, paeduc, speduc, and take average
         :raise:
         1. self.data: can be used for  EDA
         2. self.fin_data: final data frame. This data frame can be used for random forest or any decision tree models
