@@ -42,7 +42,6 @@ class survey(object):
     def _simp_var(self):
         '''
         simplify columns by replacing with short labels
-        :param self.dir
         :return: none
         '''
         variables = extract_variables(self.dir + '/GSS.sps')

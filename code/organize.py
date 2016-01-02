@@ -37,6 +37,7 @@ def replace_variables(df,variables):
     '''
     replace the column names with these short label. For convenience, all the labels are converted to lower cases.
     :param df: dataframe
+    :param variables: dictionary, generated from the function above.
     :raise: new column names
     '''
     df.columns = [variables[c].lower() for c in df.columns]

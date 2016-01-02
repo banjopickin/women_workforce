@@ -17,13 +17,18 @@ class employment(object):
         '''
         read excel file from directory
         :param dir: string. file directory
-        :raise: self.raw_data
+        :raise: self.dir, self.raw_data, self.data
         '''
+        self.dir = dir
         self.raw_data = pd.read_excel(dir + '/GSS.xls')
         self.data = self.raw_data.copy(deep = True)
 
     def _simplify(self):
         '''
-        
-        :return:
+        simplify columns by replacing with short labels
+        :return: none
         '''
+        variables = extract_variables(self.dir + '/GSS.sps')
+        replace_variables(self.data,variables)
+
+    def _
