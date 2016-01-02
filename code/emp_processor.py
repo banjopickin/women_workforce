@@ -31,4 +31,3 @@ class employment(object):
         variables = extract_variables(self.dir + '/GSS.sps')
         replace_variables(self.data,variables)
 
-    def _
