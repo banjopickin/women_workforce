@@ -23,7 +23,11 @@ Random Forest is a frequently used model for many classification projects given 
 
 ![employ plot](https://plot.ly/~yihua/94/employment-trend-1994-2014/)
 
-<iframe width="500" height="300" frameborder="0" scrolling="yes" src="https://plot.ly/~yihua/94.embed"></iframe>
+<div>
+    <a href="https://plot.ly/~yihua/94/" target="_blank" title="Employment Trend 1994 ~ 2014" style="display: block; text-align: center;"><img src="https://plot.ly/~yihua/94.png" alt="Employment Trend 1994 ~ 2014" style="max-width: 100%;width: 1400px;"  width="1400" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="yihua:94"  src="https://plot.ly/embed.js" async></script>
+</div>
+
 
 ## Method
 ### Employment study
