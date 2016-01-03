@@ -38,21 +38,14 @@ The employment rate exhibits difference across genders (Figure 2). Women always 
 
 To confirm this difference is significant, sample ratio z-test is conducted on overall employment rate of men and women. The p-value is 0.0, which suggests that women's employment rate is significantly lower than that of men. 
 
-Table 1
+Table 1 
 
- | Sex       | Employed  | Unemployed| Sum   | p-value|
- | --------  | --------- | --------- | ----- | ------ |
- | Men       | 9290      | 1498      | 10788 |        |
- | Women     | 9416      | 4404      | 13820 |        |
- | **sum**   | 18706     | 5902      | 24608 | 0.0    |
- 
+| Sex   | Employed | Unemployed |  Sum  | p-value | 
+| ----- | ------   | -----      | ----- | ------  | 
+| Men   | 9290     | 1498       | 10788 |         | 
+| Women  | 9416    | 4404       | 13820 |         |
+| **sum**  | 18706 | 5902       | 24608 | 0.0     |
 
-| color | number | label | color | number | label |
-| ----- | ------ | ----- | ----- | ------ | ----- |
-| blue  | 1      | 0     | blue  | 1      | 0     |
-| blue  | 2      | 1     | blue  | 2      | 1     |
-| red   | 1      | 0     | red   | 1      | 0     |
-| red   | 5      | 1     | red   | 5      | 1     |
 
 
 ## Method
