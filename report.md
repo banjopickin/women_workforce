@@ -47,7 +47,12 @@ Table 1
  |**sum**   | 18706     |    5902   |24608 | 0.0|
  
 
-
+| color | number | label |
+| ----- | ------ | ----- |
+| blue  | 1      | 0     |
+| blue  | 2      | 1     |
+| red   | 1      | 0     |
+| red   | 5      | 1     |
 
 
 ## Method
