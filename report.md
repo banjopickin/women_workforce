@@ -20,5 +20,10 @@ Random Forest is a frequently used model for many classification projects given 
 
 ## Result
 ### Employment status in past two decades
+
+
 ## Method
 ### Employment study
+Subset data collected between 1994 and 2014 from GSS Data Explorer site. Selected features include year, respondent id, labor force status, number of hours worked last week (hrs1), number of hours work a week (hrs2), marital status, respondent sex, household members under six years old, 6 through 12 years old, 13 through 17 years old, 18 years old and above, and level of happiness. 
+
+Since hrs1 and hrs2 contains similar information, they are merged as a new column indicating respondents' general working hours. 
