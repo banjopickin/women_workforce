@@ -21,6 +21,7 @@ Random Forest is a frequently used model for many classification projects given 
 ## Result
 ### Employment status in past two decades
 
+<iframe width="500" height="300" frameborder="0" scrolling="yes" src="https://plot.ly/~yihua/94.embed"></iframe>
 
 ## Method
 ### Employment study
