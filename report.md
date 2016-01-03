@@ -1,6 +1,12 @@
 # Women in the Workforce
 
-[Abstract](##Abstract)
+[Abstract](#Abstract)
+
+[Introduction](#Introduction)
+
+[Result](#Result)
+
+[Method](#Method)
 
 ## Abstract
 
@@ -13,3 +19,6 @@ General Social Survey is a sociological survey used to monitor demographic attit
 Random Forest is a frequently used model for many classification projects given its high accuracy. It is used in this study to predict women employment status based on their responses to survey questions on their political opinions and personal histories. Nevertheless, like other "black box" models, its lack of explanatory information between variables and predicted target labels makes random forest less interpretable. This paper uses feature contribution method on random forest to determine the influence of each variable. 
 
 ## Result
+### Employment status in past two decades
+## Method
+### Employment study
