@@ -40,11 +40,11 @@ To confirm this difference is significant, sample ratio z-test is conducted on o
 
 Table 1
 
-| Sex       | Employed  | Unemployed|Sum   |p-value
-| --------- |:---------:| ---------:|-----:|
-| Men       | 9290      | 1498      |10788 |
-| Women     | 9416      |   4404    |13820 |
-| **sum**   | 18706     |    5902   |24608 | 0.0
+ Sex       | Employed  | Unemployed|Sum   |p-value
+ --------- |---------| ---------|-----
+ Men       | 9290      | 1498      |10788 
+ Women     | 9416      |   4404    |13820 
+ **sum**   | 18706     |    5902   |24608 | 0.0
  
 
 
