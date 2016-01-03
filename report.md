@@ -1,12 +1,12 @@
 # Women in the Workforce
 
-[Abstract](#Abstract)
+[Abstract](#abstract)
 
-[Introduction](#Introduction)
+[Introduction](#introduction)
 
-[Result](#Result)
+[Result](#result)
 
-[Method](#Method)
+[Method](#method)
 
 ## Abstract
 
