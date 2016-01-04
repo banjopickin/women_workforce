@@ -127,7 +127,7 @@ def cluster_plot(X,n_clusters):
 
     # Create a subplot with 1 row and 2 columns
     fig, ax1 = plt.subplots(1)
-    fig.set_size_inches(8, 8)
+    fig.set_size_inches(7, 5)
 
     # The 1st subplot is the silhouette plot
     # The silhouette coefficient can range from -1, 1 but in this example all
@@ -175,7 +175,7 @@ def cluster_plot(X,n_clusters):
         # Compute the new y_lower for next plot
         y_lower = y_upper + 10  # 10 for the 0 samples
 
-    ax1.set_title("The silhouette plot for the various clusters.")
+    ax1.set_title("Figure 9 The silhouette plot for the various clusters (K = 6)")
     ax1.set_xlabel("The silhouette coefficient values")
     ax1.set_ylabel("Cluster label")
 
@@ -214,7 +214,7 @@ def km_emp_mean(df_pca,krange,empcol,crtcol):
     plt.plot(range(4,krange),lis,lw = 2)
     plt.xlabel('K')
     plt.ylabel('good cluster rate')
-    plt.ylim(0,1.2)
+    plt.ylim(0.5,1.2)
 
 
 def km_emp(df_pca,krange,empcol,crtcol):
