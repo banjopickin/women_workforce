@@ -38,6 +38,38 @@ def one_pub_all(df,cluster_id):
         one_pub_hist_mat(df,cluster_id,col)
         plt.show()
 
+
+def one_res_hist_mat(df,cluster_id, variable,norm = True):
+    '''
+    one vs rest histogram. using matplotlib
+    :param df: data frame
+    :param cluster_id: int, cluster id
+    :param variable: string, column name
+    :param norm:bool, normalize
+    :raise: histgram
+    '''
+    df[df.cluster != cluster_id][variable].hist(label = "rest", alpha = 0.65,bins = 20, normed = norm)
+    df[df.cluster == cluster_id][variable].hist( label = 'cluster '+ str(cluster_id), alpha = 0.75, bins = 20, normed = norm)
+    plt.legend(title = variable,loc='center left', bbox_to_anchor=(1, 0.5))
+
+
+def one_res_all(df,cluster_id):
+    '''
+    generate several one_res histogram, on one cluster_id
+    :param df: data frame
+    :param cluster_id: int, cluster id
+    :raise: several hisgram
+    '''
+    df = df.copy()
+    num_cols = ['coninc','educom','sphrs1','age','agekdbrn','chldidel']
+    for col in num_cols:
+        df[col].replace([98,97,96,9],np.nan, inplace = True)
+        one_res_hist_mat(df,cluster_id,col)
+        plt.show()
+
+
+
+
 def two_all(df, cluster1, cluster2):
     num_cols = ['coninc','educom','sphrs1','age','agekdbrn','chldidel']
     df = df.copy()
