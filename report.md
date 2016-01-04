@@ -70,9 +70,9 @@ Table 2
 
 To interpret how features contribute to model's decision, let's take a look at first row of matrix for instance. The feature coninc lowers this subject's probability of being employed by 2.41%, at the mean time, the feature age enhances this probability by 1.22%. The final prediction of this subject is the sum each feature contribution, then plus bias which is the value of the root of the node. 
 
+### Clustering Feature Contribution Matrix
 
-
-
+To further classify employed and unemployed women, more studies are needed on feature contribution matrix. To see how random forest classified samples, we need to find out common contribution paths among samples. Using Kmeans to cluster feature contribution matrix is a reasonable approach. However, the matrix has 40 columns, so before clustering, PCA is necessary for dimension reduction.
 
 
 ## Method
@@ -90,6 +90,6 @@ Before fitting survey data into random forest model, feature engineering is nece
 
 ### Tree Interpreter and Feature Contribution
 
-Tree Interpreter module is obtain from [here](https://github.com/andosa/treeinterpreter). This model requires sclera 0.17. [Here](http://scikit-learn.org/stable/install.html#install-bleeding-edge) is sklearn upgrade instruction. 
+Tree Interpreter module is obtained from [here](https://github.com/andosa/treeinterpreter). This model requires sclera 0.17. [Here](http://scikit-learn.org/stable/install.html#install-bleeding-edge) is sklearn upgrade instruction. 
 
 Generated feature contribution matrix is concatenated with true target labels as well as a bool column indicating whether the predictions are correct. This new data frame is dumped to pickle and saved as fc_df2 under data directory. 
