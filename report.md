@@ -47,6 +47,15 @@ Table 1
 | **sum**  | 18706 | 5902       | 24608 | 0.0     |
 
 
+To further investigate women at which stage yield the lowest hiring rate, data is further split according to the age range of respondents' family members. Yearly employment rate for each metadata is calculated and plotted against years (Figure 3). Women who have children under six and thirteen years old exhibit lowest hiring rate. 
+
+<div>
+    <a href="https://plot.ly/~yihua/96/" target="_blank" title="Figure 3 Employment Trend across gender and family status 1994 ~ 2014" style="display: block; text-align: center;"><img src="https://plot.ly/~yihua/96.png" alt="Figure 3 Employment Trend across gender and family status 1994 ~ 2014" style="max-width: 100%;width: 400px;"  width="400" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="yihua:96"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+
+
 
 ## Method
 
