@@ -26,24 +26,21 @@ def plot_confusion_matrix(model, X_test, y_true):
     plt.xlabel('Predicted label')
     plt.show()
 
-def plot_roc(model,X_test,y_test, title="roc plot of survey data"):
+def plot_roc(model,X_test,y_test):
     '''
     generate a roc curve
     :param model: model name
     :param X_test: test group
     :param y_test: y_test
-    :param title:plot title
     :return: roc auc score and roc curve
     '''
     fpr, tpr, thresholds = roc_curve(y_test, model.predict_proba(X_test)[:,1])
     print "roc_auc_score : {}".format(roc_auc_score(y_test,model.predict_proba(X_test)[:,1]))
-
-    plt.hold(True)
+    #plt.hold(True)
     plt.plot(fpr,tpr)
     plt.xlabel('False Positive Ratio')
     plt.ylabel('True Positive Ratio')
-    plt.title(title)
-    plt.show()
+    #plt.show()
 
 def plot_importance(model, df, max_features=10):
     '''

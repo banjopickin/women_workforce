@@ -1,12 +1,12 @@
 # Women in the Workforce
 
-[Abstract](#abstract)
+* [Abstract](#abstract)
 
-[Introduction](#introduction)
+* [Introduction](#introduction)
 
-[Result](#result)
+* [Result](#result)
 
-[Method](#method)
+* [Method](#method)
 
 ## Abstract
 
@@ -25,16 +25,13 @@ Random Forest is a frequently used model for many classification projects given 
 
 Data is grouped by years to calculate employment rate and unemployment rate. A plot chart (Figure 1) is generated to displayed yearly trend. 
 
-<div>
-    <a href="https://plot.ly/~yihua/94/" target="_blank" title="Figure 1 Employment Trend 1994 ~ 2014" style="display: block; text-align: center;"><img src="https://plot.ly/~yihua/94.png" alt="Figure 1 Employment Trend 1994 ~ 2014" style="max-width: 100%;width: 1400px;"  width="400" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="yihua:94"  src="https://plot.ly/embed.js" async></script>
-</div>
+[figure 1]
 
 The yearly employment rate is stable overall, which maintains between 75% to 80%, except the recession period dropped below 70% shortly. 
 
 The employment rate exhibits difference across genders (Figure 2). Women always yield lower employment rate at each time point. 
 
-![emp_sex](imgs/emp_sex.png)
+[figure 2]
 
 To confirm this difference is significant, sample ratio z-test is conducted on overall employment rate of men and women. The p-value is 0.0, which suggests that women's employment rate is significantly lower than that of men. 
 
@@ -47,22 +44,34 @@ Table 1
 | **sum**  | 18706 | 5902       | 24608 | 0.0     |
 
 
-To further investigate women at which stage yield the lowest hiring rate, data is further split according to the age range of respondents' family members. Yearly employment rate for each metadata is calculated and plotted against years (Figure 3). Women who have children under six and thirteen years old exhibit lowest hiring rate. 
-
-<div>
-    <a href="https://plot.ly/~yihua/96/" target="_blank" title="Figure 3 Employment Trend across gender and family status 1994 ~ 2014" style="display: block; text-align: center;"><img src="https://plot.ly/~yihua/96.png" alt="Figure 3 Employment Trend across gender and family status 1994 ~ 2014" style="max-width: 100%;width: 400px;"  width="400" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="yihua:96"  src="https://plot.ly/embed.js" async></script>
-</div>
+To further investigate women at which stage yield the lowest hiring rate, data is further split according to the age range of respondents' family members. Yearly employment rate for each metadata is calculated and plotted against years (Figure 3). Women who have children under six and thirteen years old exhibit lowest hiring rate. This result is consistent with other labor force study using other data source. Therefore, these two subsets of respondents are extracted for further study.
 
 
+[Figure 3]
+
+### Random Forest and Survey Data
+
+Processed survey data contains 4469 female respondents with children under thirteen years old and 144 survey questions range from employment status to political views. This data is passed to random forest model with employment status as predicted variable and rest features as independent variables. First forty Important features from first round random forest model are selected as independent variables to fit the second round random forest model. After grid search, the second round random forest model yield 0.81 roc_auc score. 
+
+![figure4](imgs/figure4.png)
+
+![figure5](imgs/figure5.png)
+
+### Tree Interpreter
+In order to look inside 
 
 
 ## Method
 
-### Employment study
+### Employment 
 Subset data collected between 1994 and 2014 from GSS Data Explorer site. Selected features include year, respondent id, labor force status, number of hours worked last week (hrs1), number of hours work a week (hrs2), marital status, respondent sex, household members under six years old, 6 through 12 years old, 13 through 17 years old, 18 years old and above, and level of happiness. 
 
-Since hrs1 and hrs2 contains similar information, they are merged as a new column indicating respondents' general working hours. Retired and school respondents are either quit or not join the labor force yet, we can filter these subjects out. An "employed" column is created to simplify working status information. "Working fulltime" and "working parttime" are treated as employed and labeled as "True", whereas the rest are labeled as "False".
+Since hrs1 and hrs2 contains similar information, they are merged as a new column indicating respondents' general working hours. Retired and school respondents are either quit or not join the labor force yet, we can filter these subjects out. An "employed" column is created to simplify working status information. "Working full time" and "working part time" are treated as employed and labeled as "True", whereas the rest are labeled as "False".
 
 To further reduce the complexity, respondents who have family member under six years old are label "True" in "has_baby" column, otherwise label "False". Same method is applied to "has_preteen" and "has_teen" columns. 
 
+### Survey data processing
+
+Before fitting survey data into random forest model, feature engineering is necessary. A class function is written to treat survey data set as an object and process it as a whole. The process steps include: 1. Convert column names from survey questions to short names. 2. Subset female respondents with children under thirteen years old. 3.Create a new column indicating whether the respondent is employed. 4. Impute some missing values in numerical variables with median. 5. Flag "Not applicable", "No answer" or string answers in numerical variables. 6. Convert categorical dat to numerical using GSS.sps file under data directory. 7. Create “educom” column which combine each respondent's father, mather and spouse's highest year school completed, then take average. This new feature can be interpreted as average education level of respondent's family members. 
+
+### Tree Interpreter and Feature Contribution
