@@ -202,3 +202,35 @@ def cluster_ztest_df(df, bonf = True):
         if p <0.05/K:
             lis.append((c,round(z,2), round(p,2)))
     return sorted(lis, key = lambda x: x[2])
+
+
+def subset_normed_df(df,cluster_id, variable, alis):
+    '''
+    This function will execute following steps:
+    1. generate a temporary data frame, rows split data frame by cluster id, columns are the variable of interest
+    2. normalize this temporary data frame, row-wise.
+    3. subset normalized data frame, according the alis content
+    :param df: data frame
+    :param clusterid: int, cluster id
+    :param variable: string, df column
+    :param alis: list of strings, temp data frame column names
+    :return: data frame
+    '''
+    df = df.copy()
+    df.replace('Not applicable', np.nan, inplace = True)
+    res = df[df.cluster!=cluster_id][variable].value_counts()
+    one = df[df.cluster==cluster_id][variable].value_counts()
+    index2 = "Cluster_" + str(cluster_id)
+    temp = pd.DataFrame([res, one],index=["Rest", index2])
+    temp_n = temp.apply(lambda x: x/x.sum(), axis=1)
+    return temp_n[alis]
+
+def subset_all(df,cluster_id,variables, alists):
+    '''
+    
+    :param df:
+    :param cluster_id:
+    :param variables:
+    :param alists:
+    :return:
+    '''
