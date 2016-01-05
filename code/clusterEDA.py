@@ -48,6 +48,9 @@ def one_res_hist_mat(df,cluster_id, variable,norm = True):
     :param norm:bool, normalize
     :raise: histgram
     '''
+
+    df = df.copy()
+    df[variable].replace([98,97,96,9],np.nan, inplace = True)
     df[df.cluster != cluster_id][variable].hist(label = "rest", alpha = 0.65,bins = 20, normed = norm)
     df[df.cluster == cluster_id][variable].hist( label = 'cluster '+ str(cluster_id), alpha = 0.75, bins = 20, normed = norm)
     plt.legend(title = variable,loc='center left', bbox_to_anchor=(1, 0.5))
