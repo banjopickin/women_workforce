@@ -9,6 +9,10 @@ import numpy as np
 import pandas as pd
 import scipy.stats as scs
 
+import plotly.plotly as py
+
+import plotly.graph_objs as go
+
 
 def one_pub_hist_mat(df,cluster_id, variable,norm = True):
     '''
@@ -242,3 +246,48 @@ def subset_all(df,cluster_id,variables, alists):
         t_df = subset_normed_df(df,cluster_id,var,alis)
         d = pd.concat([d,t_df],axis = 1)
     return d
+
+
+def plotly_bar(df, color0, color1, title):
+    '''
+    make a bar chart using plotly.
+    :param df: data frame
+    :param color0: string. rgb or rgba color to represent one population
+    :param color1: string. rgb or rgba color to represent another population
+    :param title: chart title
+    :return: fig, to pass onto plotly
+    '''
+    name1 = df.index[1]
+    # first row of data frame
+    trace0 = go.Bar(
+        x = df.columns,
+        y = df.iloc[0,:].values,
+        name = 'Rest of Population',
+        marker = dict(
+            color = color0
+        )
+    )
+    # second row of data frame
+    trace1 = go.Bar(
+        x = df.columns,
+        y = df.iloc[1,:].values,
+        name = name1,
+        marker = dict(
+            color = color1
+        )
+    )
+    # put them together
+    data = [trace0,trace1]
+    # layout design
+    layout = go.Layout(
+
+        title = title,
+        font = dict(size = 30),
+        plot_bgcolor="rgba(173, 182, 167, 0.08)",
+        xaxis=dict(
+             titlefont=dict(size = 12 )
+        )
+    )
+    # fig
+    fig = go.Figure(data=data, layout = layout)
+    return fig
