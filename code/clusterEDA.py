@@ -227,10 +227,18 @@ def subset_normed_df(df,cluster_id, variable, alis):
 
 def subset_all(df,cluster_id,variables, alists):
     '''
-    
-    :param df:
-    :param cluster_id:
-    :param variables:
-    :param alists:
-    :return:
+    This function follows these steps:
+    1. zip variables and alists and make a for loop
+    2  in each loop, run subset_normed_df
+    3. concatenage all the data frames generated from the loop.
+    :param df: data frame
+    :param cluster_id: int, data frame
+    :param variables: list of strings, columns names of df
+    :param alists: list of list. Each list contains column names of subset data frame column names.
+    :return: data frame
     '''
+    d = pd.DataFrame()
+    for var, alis in zip(variables,alists):
+        t_df = subset_normed_df(df,cluster_id,var,alis)
+        d = pd.concat([d,t_df],axis = 1)
+    return d
