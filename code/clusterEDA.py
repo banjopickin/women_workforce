@@ -227,7 +227,7 @@ def subset_normed_df(df,cluster_id, variable, alis):
     res = df[df.cluster!=cluster_id][variable].value_counts()
     one = df[df.cluster==cluster_id][variable].value_counts()
     index2 = "Cluster_" + str(cluster_id)
-    temp = pd.DataFrame([res, one],index=["Rest", index2])
+    temp = pd.DataFrame([res, one],index=["Rest of Population", index2])
     temp_n = temp.apply(lambda x: x/x.sum(), axis=1)
     return temp_n[alis]
 
@@ -303,6 +303,7 @@ def comb_bar(df,**kwargs):
     :return: bar chart
     '''
     matplotlib.style.use('fivethirtyeight')
+    #matplotlib.style.use('ggplot')
     ax = df.T.plot(kind = 'bar',**kwargs)
     for p in ax.patches:
         height = p.get_height()
