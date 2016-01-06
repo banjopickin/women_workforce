@@ -295,11 +295,12 @@ def plotly_bar(df, color0, color1, title):
     return fig
 
 
-def comb_bar(df,**kwargs):
+def comb_bar(df,leg_bool,**kwargs):
     '''
     make a bar chart on data frame generated from subset_all
     :param df: data frame
     :param kwargs: key words
+    :param leg_bool: boolean, set legend visible
     :return: bar chart
     '''
     matplotlib.style.use('fivethirtyeight')
@@ -309,5 +310,5 @@ def comb_bar(df,**kwargs):
         height = p.get_height()
         ax.text(p.get_x(), height+0.001,'%1.2f'%(height), fontsize = 18)
     plt.xticks(rotation='horizontal')
-    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5), fontsize = 15)
+    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5), fontsize = 15).set_visible(leg_bool)
 
