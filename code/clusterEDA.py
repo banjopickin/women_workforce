@@ -6,6 +6,7 @@ from __future__ import division
 
 import matplotlib.pylab as plt
 from matplotlib import rc
+import matplotlib
 import numpy as np
 import pandas as pd
 import scipy.stats as scs
@@ -301,11 +302,11 @@ def comb_bar(df,**kwargs):
     :param kwargs: key words
     :return: bar chart
     '''
-    rc('xtick', labelsize=20)
+    matplotlib.style.use('ggplot')
     ax = df.T.plot(kind = 'bar',**kwargs)
     for p in ax.patches:
         height = p.get_height()
         ax.text(p.get_x(), height+0.01,'%1.2f'%(height))
     plt.xticks(rotation='horizontal')
-    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5), fontsize = 15)
     plt.show()
