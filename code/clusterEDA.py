@@ -309,8 +309,7 @@ def comb_bar(df,leg_bool,**kwargs):
     ax = df.T.plot(kind = 'bar',**kwargs)
     for p in ax.patches:
         height = p.get_height()
-
-        ax.text(p.get_x(), height+0.001,'%1.2f'%(height), fontsize = 18)
+        ax.text(p.get_x(), height+0.005,'%1.2f'%(height), fontsize = 18)
     plt.xticks(rotation='horizontal')
     plt.legend(loc='center left', bbox_to_anchor=(1, 0.5), fontsize = 15).set_visible(leg_bool)
 
