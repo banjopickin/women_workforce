@@ -3,6 +3,8 @@
 ## Summary
 To study the employment status of women in past two decades and investigate which features determine which women stay in the workforce.
 
+http://slides.com/yihualeng/deck/live
+
 ## Motivation
 While more talented women are getting higher education, whether this trend results in higher employment rate or satisfaction level among women needs more study. I would like to use data from General Social Survey (GSS) to investigate the employment status among women in past two decades. To further understand women’s motivation to work, a classification model will be implemented to measure which features categorize the women who stay in the workforce. 
 
