@@ -19,42 +19,40 @@ figure
 | Women  | 9416    | 4404       | 13820 |         |
 | **sum**  | 18706 | 5902       | 24608 | 0.0     |
 
-In the Pat two decades, women's employment rate is lower than the men's. And the sample proportion z-test result showed this difference is significant.
+In past two decades, women's employment rate is lower than the men's. And the sample proportion z-test result showed this difference is significant.
+
+Then I would like to know how women's employment statuses look like in different family status.
+
+figure
+
+The above figure shows that Women who have children under six and thirteen years old yield lowest hiring rate. This result implies that women are more likely to leave the workforce at this stage.
+
+Amongst the women who have children under thirteen-year-old, who are the working ones? And what motivate them to work? The rest of my research will focus on answering these questions using survey data.
+
+## Result
+
+According to what random forest model suggests women with children under thirteen-year-old fall into six categories. Three subsets are the working and three are unemployed.
+
+### Employed women
+
+Women with children under thirteen-year-old who stay in the work force falls into the following three categories.
+
+**1. Category One**
+
+Women in this category are more likely grew up in low-income family, have first child early (under 20) and work as blue collar workers.
+
+**2. Category Two**
+
+Their highest earned degree are more likely to be high school and they are either never married, separated or divorced, aka single moms. To raise the children and support family, they choose to work.
+
+**3. Category Three**
+Women in this category are more likely have higher degree and i 
 
 
+## Method
 
-## Deliverables
-My work will be presented as a report as well as presentation slides. Charts or other
-diagrams can visualize the exploratory data analysis results. Flowing data charts will be implemented to show trends of change through history.
+### Random Forest and Survey Data
 
-## Data Sources
-[My GSS Project](https://gssdataexplorer.norc.org/projects/5222)
+Processed survey data contains 4469 female respondents with children under thirteen years old and 144 survey questions range from employment status to political views. This data is passed to random forest model with employment status as predicted variable and rest features as independent variables. First forty Important features from first round random forest model are selected as independent variables to fit the second round random forest model. After grid search, the second round random forest model yields 0.81 roc_auc score.
 
-## Process
-### Employment Status Study
-1. Download data about respondents’ employment status, family status and sex. Use this data to answer the following questions.
-
-2. How did  the employment rate change in past decade? Did women and men display a similar pattern of change?
-
-   * Side by side bar charts
-
-   * t-test
-
-3.  Do men and women exhibit the same changes of employment status along with marital and family status changes?
-    * charts and Chi-square test.
-
-    * find out at which stage women employment rate change most and subset these group of women for further study.
-
-4.  The association between women’s employment status and their level of happiness.
-
-     * Using t-testing on GSS data. Meanwhile, I’ll compare these results with mens’ to see if there’s any difference.
-
-### Regression (or classification) Model:
-
-1.   Subset women of different family statuses to show the difference in their employed:unemployed ratios.  Select survey features which reflected their opinions on work and life.
-
-2. Build several regression and classification models, investigate which features are important for women to stay in the workforce.
-
-###Time series Model (If I have time):
-
-1. Build a time series model to answer how many women will join the workforce in next few years.
+![figure5](imgs/figure5.png)
