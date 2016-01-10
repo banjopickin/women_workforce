@@ -175,7 +175,7 @@ def cluster_plot(X,n_clusters):
         # Compute the new y_lower for next plot
         y_lower = y_upper + 10  # 10 for the 0 samples
 
-    ax1.set_title("Figure 9 The silhouette plot for the various clusters (K = 6)")
+    ax1.set_title("The silhouette plot for the various clusters (K = 6)")
     ax1.set_xlabel("The silhouette coefficient values")
     ax1.set_ylabel("Cluster label")
 
