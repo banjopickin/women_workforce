@@ -24,7 +24,8 @@ In past two decades, women's employment rate is lower than the men's. And the sa
 
 Then I would like to know how women's employment statuses look like in different family status.
 
-figure
+![family](imgs/readme_figs/family.png)
+
 
 The above figure shows that Women who have children under six and thirteen years old yield lowest hiring rate. This result implies that women are more likely to leave the workforce at this stage.
 
@@ -73,9 +74,7 @@ Women in this category are more likely to be riased in rich families. Their spou
 
 Processed survey data contains 4469 female respondents with children under thirteen years old and 144 survey questions range from employment status to political views. This data is passed to random forest model with employment status as predicted variable. First forty Important features from first round random forest model are selected as independent variables to fit the second round random forest model. After grid search, the second round random forest model yield 0.81 roc_auc score.
 
-![figure4](imgs/figure4.png)
-
-![figure5](imgs/figure5.png)
+![figure5](imgs/readme_figs/roc_curve.png)
 
 ### Tree Interpreter
 
