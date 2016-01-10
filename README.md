@@ -5,11 +5,12 @@
 [General Social Survy(GSS)](https://gssdataexplorer.norc.org/) is a sociological survey which monitors demographic attitudes and living conditions of residents of the United States. The entire data is accessible to public and is one of most commonly used data source in social science study.
 
 ## Big Picture Question
-What factors influence women's working statuses is Uinited States in past two decades?
 
-To Answer this question, first I have to know what does women's employment status look like and how is it different from the male population?
+**What factors influence women's working statuses is Uinited States in past two decades?**
 
-## employment
+To Answer this question, first I have to know what does women's employment status look like and how is it different from the male's?
+
+## Employment
 
 ![emp_sex](imgs/readme_figs/emp_sex.png)
 
@@ -22,18 +23,18 @@ To Answer this question, first I have to know what does women's employment statu
 
 In past two decades, women's employment rate is lower than the men's. And the sample proportion z-test result showed this difference is significant.
 
-Then I would like to know how women's employment statuses look like in different family status.
+Then I would like to know how women's employment statuses look like at different family status.
 
 ![family](imgs/readme_figs/family.png)
 
 
 The above figure shows that Women who have children under six and thirteen years old yield lowest hiring rate. This result implies that women are more likely to leave the workforce at this stage.
 
-Amongst the women who have children under thirteen-year-old, who are the working ones? And what motivate them to work? The rest of my research will focus on answering these questions using survey data.
+Amongst the women with children under thirteen-year-old, who are the working ones? And what motivate them to work? The rest of my research will focus on answering these questions using survey data.
 
 ## Result
 
-According to what random forest model suggests women with children under thirteen-year-old fall into six categories. Three subsets are the working and three are unemployed.
+According to what random forest model suggests women with children under thirteen-year-old fall into six categories. Three subsets are employed and three are not.
 
 ### Employed women
 
@@ -49,7 +50,7 @@ Their highest earned degree are more likely to be high school and they are eithe
 
 **Category Three**
 
-Women in this category are more likely to have higher degrees and identify themselves in the middle class. They have diverse party affiliation and political views. They takes up the largest proportion of the employed women.
+Women in this category are more likely to have higher degrees and identify themselves in middle class. They have diverse party affiliation and political views. They takes up the largest proportion of the employed women.
 
 ### Unemployed Women
 
@@ -89,27 +90,27 @@ To interpret how features contribute to model's decision, let's take a look at f
 
 ### Clustering Feature Contribution Matrix
 
-We need to find out common contribution paths within each target label. Using Kmeans to cluster feature contribution matrix is a reasonable approach. However, the matrix has 40 columns, so before clustering, PCA is necessary for dimension reduction.
+Next, we need to find out common contribution paths within each target label. Using Kmeans to cluster feature contribution matrix is a reasonable approach. However, the matrix has 40 columns, so before clustering, PCA is necessary for dimension reduction.
 
 ![figure 6 pca](imgs/readme_figs/pca.png)
 
-Figure 6 displays the explained variance ratio for each principle component from feature contribution matrix. First three principle components are chosen to transform the matrix, because their cumulated variance can explain over 50% of variance.  
+According to the figure above, first three principle components are chosen to transform the matrix, because their cumulated variance can explain over 50% of variance.  
 
 To determine which k for kmeans. a function is written to check kmeans cluster performance. It takes a range of Ks and make a for loop. In each loop it generates k clusters using kmeans, concatenates cluster id to 'employed' and 'correct' columns to make a new data frame. Then group data frame by cluster id, calculate employed rate and correct rate by taking means.
-If the employed rate is higher than 0.7 or lower than 0.3, then we can say this cluster successfully cluster employed or unemployed population, so this cluster yields pure population of interest.If the correct rate is higher than 0.7, we can say this cluster has hight accuracy. The clusters with pure population and meantime with high accuracy are ones we want. The percentage of good cluster rate for each Kmeans is Calculated and plot against number of K.
+If the employed rate is higher than 0.7 or lower than 0.3, then we can say this cluster successfully cluster employed or unemployed population, so this cluster yields pure population of interest.If the correct rate is higher than 0.7, we can say this cluster has hight accuracy. The clusters with pure population and meantime with high accuracy are ones we want. The percentage of good cluster rate for each Kmeans is calculated and plot against number of K.
 
 ![figure7](imgs/readme_figs/good_rate.png)
 
-According to Figure 7, Kmeans can cluster target clearly when the K is small than 7.
+According to the figure above, Kmeans can cluster target clearly when the K is small than 7.
 
 ![figure 8](imgs/readme_figs/sil_K.png)
 ![figure 9](imgs/readme_figs/cluster_plot.png)
 
-Then we plot average silhoutte score against K (Figure 8), it suggests that it yields the highest silhoutte Score (0.52) when K is 6. Figure 9 visualizes silhoutte scores for each cluster generated by Kmeans when K is 6. It suggests that all the clusters have considerable proportion above average silhoutte score. Therefore we set n_cluster at six to conduct Kmeans.
+Then we plot average silhoutte score against K, and it suggests that it yields the highest silhoutte Score (0.52) when K is 6. Therefore we set n_cluster at six to conduct Kmeans.
 
 ![figure 10](imgs/readme_figs/fcdf.png)
 
-After PCA and Kmeans, each row has a cluster id indicating which cluster it belongs to. Employed rate and correct rate are Calculated with cluster and presented as Figure 10. Cluster 1, 2,5 are unemployed groups and Cluster 0,3,4 are the unemployed groups. Each cluster displays pure employment status and high accuracy, therefore we can move on to next step.
+After PCA and Kmeans, each row has a cluster id indicating which cluster it belongs to. Employed rate and correct rate in each cluster are calculated. Cluster 1, 2,5 are unemployed groups and Cluster 0,3,4 are the unemployed groups. Each cluster displays pure employment status and high accuracy, therefore we can move on to next step.
 
 ### Cluster study
 Since the feature Contribution matrix shares the same structure as survey data frame, whose rows are the respondents and columns are the survey questions, we can concatenate cluster id to the survey data frame. This new survey data set is saved as df_id. 
