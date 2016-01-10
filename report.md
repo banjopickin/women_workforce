@@ -51,7 +51,7 @@ To further investigate women at which stage yield the lowest hiring rate, data i
 
 ### Random Forest and Survey Data
 
-Processed survey data contains 4469 female respondents with children under thirteen years old and 144 survey questions range from employment status to political views. This data is passed to random forest model with employment status as predicted variable and rest features as independent variables. First forty Important features from first round random forest model are selected as independent variables to fit the second round random forest model. After grid search, the second round random forest model yield 0.81 roc_auc score.
+Processed survey data contains 4469 female respondents with children under thirteen years old and 144 survey questions range from employment status to political views. This data is passed to random forest model with employment status as predicted variable. First forty Important features from first round random forest model are selected as independent variables to fit the second round random forest model. After grid search, the second round random forest model yield 0.81 roc_auc score.
 
 ![figure4](imgs/figure4.png)
 
@@ -72,7 +72,7 @@ To interpret how features contribute to model's decision, let's take a look at f
 
 ### Clustering Feature Contribution Matrix
 
-To further classify employed and unemployed women, more studies are needed on feature contribution matrix. We need to find out common contribution paths within each target label. Using Kmeans to cluster feature contribution matrix is a reasonable approach. However, the matrix has 40 columns, so before clustering, PCA is necessary for dimension reduction.
+We need to find out common contribution paths within each target label. Using Kmeans to cluster feature contribution matrix is a reasonable approach. However, the matrix has 40 columns, so before clustering, PCA is necessary for dimension reduction.
 
 ![figure 6 pca](imgs/figure6_pca.png)
 
@@ -95,10 +95,9 @@ Then we plot average silhoutte score against K (Figure 8), it suggests that it y
 After PCA and Kmeans, each row has a cluster id indicating which cluster it belongs to. Employed rate and correct rate are Calculated with cluster and presented as Figure 10. Cluster 1, 2,5 are unemployed groups and Cluster 0,3,4 are the unemployed groups. Each cluster displays pure employment status and high accuracy, therefore we can move on to next step.
 
 ### Cluster study
- Since the feature Contribution matrix shares the same structure as survey data frame, whose rows are the respondents and columns are the survey questions, we can concatenate cluster id to the survey data frame. This new survey data set is saved as f
+Since the feature Contribution matrix shares the same structure as survey data frame, whose rows are the respondents and columns are the survey questions, we can concatenate cluster id to the survey data frame. This new survey data set is saved as df_id. 
 
-
-0.52546132160754577)
+Each cluster is compared with rest of population using sample proportion z-test.  
 
 ## Method
 
