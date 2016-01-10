@@ -163,7 +163,12 @@ VARIABLE LABELS
    SPKRAC   "Allow racist to speak"
    SPKCOM   "Allow communist to speak"
    SPKMIL   "Allow militarist to speak"
-   SPKHOMO  "Allow homosexual to speak"ar
+   SPKHOMO  "Allow homosexual to speak"
+   CAPPUN   "Favor or oppose death penalty for murder"
+   GUNLAW   "Favor or oppose gun permits"
+   COURTS   "Courts dealing with criminals"
+   GRASS    "Should marijuana be made legal"
+   FUND     "How fundamentalist is r currently"
    RELITEN  "Strength of affiliation"
    POSTLIFE "Belief in life after death"
    AFFRMACT "Favor preference in hiring blacks"
