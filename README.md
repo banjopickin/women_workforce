@@ -37,21 +37,33 @@ According to what random forest model suggests women with children under thirtee
 
 Women with children under thirteen-year-old who stay in the work force falls into the following three categories.
 
-**1. Category One**
+**Category One**
 
 Women in this category are more likely grew up in low-income family, have first child early (under 20) and work as blue collar workers.
 
-**2. Category Two**
+**Category Two**
 
 Their highest earned degree are more likely to be high school and they are either never married, separated or divorced, aka single moms. To raise the children and support family, they choose to work.
 
-**3. Category Three**
+**Category Three**
 
 Women in this category are more likely to have higher degrees and identify themselves in the middle class. They have diverse party affiliation and political views. They takes up the largest proportion of the employed women.
 
 ### Unemployed Women
 
 Women with children under thirteen-year-old who stay in the work force falls into the following three categories.
+
+** Category Four**
+
+Women in this category are more likely to have children early, grow up in low-income families. Their highest earned education degrees are less than high school.
+
+** Category Five** 
+
+Women in this category are more likely to have high school degree, consider their family income below average and their spouses work over 40 hours per week.
+
+** Category Six**
+
+Women in this category are more likely to be riased in rich families 
 
 ## Method
 
