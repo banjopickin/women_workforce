@@ -11,7 +11,8 @@ To Answer this question, first I have to know what does women's employment statu
 
 ## employment
 
-figure
+![emp_sex](imgs/readme_figs/emp_sex.png)
+
 
 | Sex   | Employed | Unemployed |  Sum  | p-value |
 | ----- | ------   | -----      | ----- | ------  |
