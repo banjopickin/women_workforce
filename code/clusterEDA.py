@@ -226,7 +226,8 @@ def subset_normed_df(df,cluster_id, variable, alis):
     df.replace('Not applicable', np.nan, inplace = True)
     res = df[df.cluster!=cluster_id][variable].value_counts()
     one = df[df.cluster==cluster_id][variable].value_counts()
-    index2 = "Cluster_" + str(cluster_id)
+    #index2 = "Cluster_" + str(cluster_id)
+    index2 = "Cluster"
     temp = pd.DataFrame([res, one],index=["Rest of Population", index2])
     temp_n = temp.apply(lambda x: x/x.sum(), axis=1)
     return temp_n[alis]
