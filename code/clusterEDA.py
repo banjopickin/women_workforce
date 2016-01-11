@@ -18,12 +18,12 @@ import plotly.graph_objs as go
 
 def one_pub_hist_mat(df,cluster_id, variable,norm = True):
     '''
-    one vs public histgram. using matplotlib
+    one vs public histogram. using matplotlib
     :param df: data frame
     :param cluster_id: int, cluster id
     :param variable: string, column name
     :param norm:bool, normalize
-    :raise: histgram
+    :raise: histogram
     '''
     df[variable].hist(label = "public", alpha = 0.65,bins = 20, normed = norm)
     df[df.cluster == cluster_id][variable].hist( label = 'cluster '+ str(cluster_id), alpha = 0.75, bins = 20, normed = norm)
@@ -32,10 +32,10 @@ def one_pub_hist_mat(df,cluster_id, variable,norm = True):
 
 def one_pub_all(df,cluster_id):
     '''
-    generate several one_pub histgram, on one cluster_id
+    generate several one_pub histogram, on one cluster_id
     :param df: data frame
     :param cluster_id: int, cluster id
-    :raise: several hisgram
+    :raise: several histogram
     '''
     df = df.copy()
     num_cols = ['coninc','educom','sphrs1','age','agekdbrn','chldidel']
@@ -52,7 +52,7 @@ def one_res_hist_mat(df,cluster_id, variable,norm = True):
     :param cluster_id: int, cluster id
     :param variable: string, column name
     :param norm:bool, normalize
-    :raise: histgram
+    :raise: histogram
     '''
 
     df = df.copy()
