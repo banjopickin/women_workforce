@@ -1,8 +1,8 @@
 #  Women in the Workforce
 
 **Data Source**
-
-[General Social Survy(GSS)](https://gssdataexplorer.norc.org/) is a sociological survey which monitors demographic attitudes and living conditions of residents of the United States. The entire data is accessible to public and is one of most commonly used data source in social science study.
+ 
+The [General Social Survy(GSS)](https://gssdataexplorer.norc.org/) is a sociological survey which monitors demographic attitudes and living conditions of residents of the United States. The entire data is accessible to public and is one of most commonly used data source in social science study.
 
 ## Big Picture Question
 
@@ -12,7 +12,7 @@ To Answer this question, first I have to know what does women's employment statu
 
 ## Employment
 
-![emp_sex](imgs/readme_figs/emp_sex.png)
+![emp_sex](imgs/employ/emp_sex.png)
 
 
 | Sex   | Employed | Unemployed |  Sum  | p-value |
