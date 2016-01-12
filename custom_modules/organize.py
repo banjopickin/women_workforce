@@ -11,7 +11,7 @@ import pdb
 def extract_variables(filedir):
     '''
     Extract variable labels from sps file.
-    :param filedir: directory to corresponding sps file.
+    :param filedir: string, directory to corresponding sps file.
     :return: dictionary. Keys: variable names (long string). values: variable labels (short string).
     '''
     lis = []
@@ -36,7 +36,7 @@ def extract_variables(filedir):
 def replace_variables(df,variables):
     '''
     replace the column names with these short label. For convenience, all the labels are converted to lower cases.
-    :param df: dataframe
+    :param df: data frame
     :param variables: dictionary, generated from the function above.
     :raise: new column names
     '''
@@ -84,7 +84,7 @@ def extr_val_labels(filedir):
     '''
     extract value labels from sps file
     :param filedir: sps file directory
-    :return: dictonary of dictionaries. keys are columns names. inside of subdictionary, keys are labels,
+    :return: dictionary of dictionaries. keys are columns names. inside of sub-dictionary, keys are labels,
     values are numbers
     '''
     with open(filedir) as f:

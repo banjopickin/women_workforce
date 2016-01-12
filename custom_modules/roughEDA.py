@@ -16,7 +16,7 @@ def simple_bar(col, size = (8,8)):
     '''
     generate a bar-chart to visualize counts of categorical variable
     :param col: panda series, specific column
-    :param size: figuresize, tuple
+    :param size: figure size, tuple
     :raise: bar-chart
     '''
     val_counts = col.value_counts(dropna=False)
@@ -53,10 +53,10 @@ def v_bar(colx,coly,size = (8,8)):
 def h_bar(col_group,col_split, size = (8,8)):
     '''
     create a unstack horizontal bar chart.original number, not percentiled
-    :param colx: panda series. varialbes to group
+    :param colx: panda series. variables to group
     :param coly: panda series. variables to split within each group
     :param size: tuple. figure size
-    :output: horizontal bar chart
+    :raise: horizontal bar chart
     '''
     temp = pd.crosstab(col_group,col_split,dropna=False)
     temp.plot(kind = 'barh', figsize = size)
@@ -68,7 +68,7 @@ def pie_chart(col_fracs, col_lab, size = (20,8)):
     generate a pie chart
     :param col_fracs: variable value counts to show on pie chart
     :param col_lab: each slice label
-    :param size: figsize
+    :param size: tuple, figure size
     :output: pie chart
     '''
     temp_df = pd.crosstab(col_lab, col_fracs, dropna=False)
@@ -76,12 +76,12 @@ def pie_chart(col_fracs, col_lab, size = (20,8)):
 
 def gb_emp_hist(df,col,xlim = (0,30), bin=20):
     '''
-    generate a histgraph, to visualize the distribution of certain feature within each employment group
-    :param df: dataframe
+    generate a histogram, to visualize the distribution of certain feature within each employment group
+    :param df: data frame
     :param col: string, feature name
     :param bin: bin size
-    :param xlimi: tuple, limit of x-axis
-    :return: histgraph
+    :param xlim: tuple, limit of x-axis
+    :return: histogram
     '''
     temp = df[['employed',col]]
     temp[temp.employed == True][col].hist(alpha = 0.4,bins = bin,color = 'green',label = 'employed',normed = True)

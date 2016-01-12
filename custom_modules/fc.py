@@ -81,9 +81,9 @@ def mode_answer(col):
 
 def mode_answer_cat(col):
     '''
-
-    :param df:
-    :return:
+    find the most frequent answer in categorical column
+    :param col: panda series
+    :return: string
     '''
     dict = OrderedDict(sorted(Counter(col).items(), key=lambda x: x[1], reverse=True))
     x = dict.items()[0]
@@ -146,6 +146,11 @@ def rank_1st(col):
 
 
 def rank_2nd(col):
+    '''
+    Find the answer which ranks the second place in the column
+    :param col: panda series
+    :return: tuple, answer and ratio
+    '''
     dict = OrderedDict(sorted(Counter(col).items(), key=lambda x: x[1], reverse=True))
     if len(dict) ==1:
         return "not apply"
@@ -154,6 +159,12 @@ def rank_2nd(col):
         return x[0], round(x[1] / sum(dict.values()), 2)
 
 def cluster_summary(df,catcols):
+    '''
+    summarize most voted answer and its percentage, second most voted answer and its percentage
+    :param df: data frame
+    :param catcols: list of integer, column index.
+    :return:
+    '''
     summary = pd.DataFrame()
     summary['rank_first_v'] = df[catcols].apply(lambda x: rank_1st(x)[0])
     summary['rank_first_p'] = df[catcols].apply(lambda x: rank_1st(x)[1])

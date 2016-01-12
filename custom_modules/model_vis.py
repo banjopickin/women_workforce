@@ -1,5 +1,5 @@
 '''
-This document contains handy funcitons to visualize model computation results
+This document contains handy functions to visualize model computation results
 '''
 
 from __future__ import division
@@ -13,7 +13,13 @@ import matplotlib.cm as cm
 plt.style.use('ggplot')
 
 def plot_confusion_matrix(model, X_test, y_true):
-    '''Code stolen brazenly from sklearn example.'''
+    '''
+    Code stolen brazenly from sklearn example.
+    :param model: model name
+    :param X_test: numpy array
+    :param y_true: numpy array
+    :raise: confusion matrix and heatmap
+    '''
     cm = confusion_matrix(y_true, model.predict(X_test))
 
     print(cm)
@@ -30,8 +36,8 @@ def plot_roc(model,X_test,y_test):
     '''
     generate a roc curve
     :param model: model name
-    :param X_test: test group
-    :param y_test: y_test
+    :param X_test: numpy array, test group
+    :param y_test: numpy array, y_test
     :return: roc auc score and roc curve
     '''
     fpr, tpr, thresholds = roc_curve(y_test, model.predict_proba(X_test)[:,1])
@@ -48,7 +54,7 @@ def plot_importance(model, df, max_features=10):
     :param model: model name
     :param df: pandas dataframe
     :param max_features:int, maximum number of features to plot
-    :return:
+    :raise: bar chart
     '''
     feature_importance = model.feature_importances_
     # make importances relative to max importance
@@ -83,7 +89,7 @@ def plot_silhouette(X,nrange):
     plot average silhouette score against the number of clusters
     :param nrange: int, indicates range of cluster numbers
     :param X: numpy array, data set to cluster
-    :return: plot
+    :raise: plot
     '''
     sil_scores = [get_silhouette_score(X,i) for i in xrange(2,nrange)]
     plt.plot(range(2,nrange), sil_scores)
@@ -96,7 +102,7 @@ def kmean_score(X,nclust):
     calculate kmeans score
     :param X:numpy array, data set to cluster
     :param nclust: int, number of cluster
-    :return:
+    :return: float
     '''
     km = KMeans(nclust)
     km.fit(X)

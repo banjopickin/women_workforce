@@ -64,10 +64,10 @@ def one_res_hist_mat(df,cluster_id, variable,norm = True):
 
 def one_res_all(df,cluster_id):
     '''
-    generate several one_res histogram, on one cluster_id
+    generate multiple one_res histogram, on one cluster_id
     :param df: data frame
     :param cluster_id: int, cluster id
-    :raise: several hisgram
+    :raise: several histograms
     '''
     df = df.copy()
     num_cols = ['coninc','educom','sphrs1','age','agekdbrn','chldidel']
@@ -80,6 +80,13 @@ def one_res_all(df,cluster_id):
 
 
 def two_all(df, cluster1, cluster2):
+    '''
+    compare two clusters on one histogram
+    :param df: panda data frame
+    :param cluster1: int, cluster id
+    :param cluster2: int, another cluster id
+    :raise: histogram
+    '''
     num_cols = ['coninc','educom','sphrs1','age','agekdbrn','chldidel']
     df = df.copy()
     for col in num_cols:
@@ -92,12 +99,12 @@ def two_all(df, cluster1, cluster2):
 
 def one_pub_bar(df,cluster_id, variable, size = (10,5)):
     '''
-    bar charts, one cluster, public side by side to compare one feature.
+    bar charts, one cluster vs public side by side to compare one feature.
     :param df: data frame
     :param cluster_id: int, cluster id
     :param variable: string, column name
     :param size: tuple, figure size
-    :return: fig
+    :raise: bar chart
     '''
     df = df.copy()
     df.replace('Not applicable', np.nan, inplace = True)
@@ -117,7 +124,7 @@ def one_pub_bar(df,cluster_id, variable, size = (10,5)):
 
 def one_res_bar(df,cluster_id, variable, size = (10,5)):
     '''
-    bar charts, one cluster, public side by side to compare one feature.
+    bar charts, one cluster vs rest of public side by side to compare one feature.
     :param df: data frame
     :param cluster_id: int, cluster id
     :param variable: string, column name
@@ -144,12 +151,13 @@ def one_res_bar(df,cluster_id, variable, size = (10,5)):
 def two_bar(df, cluster1,cluster2,variable, size = (10,5)):
     '''
     compare two clusters on same variable
-    :param df: data fram
+    :param df: data frame
     :param cluster1: int, cluster id
     :param cluster2: int, cluster id
     :param variable: string, column name
     :param size: figure size
     :return: data frame
+    :raise: bar chart
     '''
     df = df.copy()
     df.replace('Not applicable',np.nan,inplace = True)
@@ -172,7 +180,7 @@ def two_bar(df, cluster1,cluster2,variable, size = (10,5)):
 def cluster_ztest(df,answer, two_tail = False):
     '''
     conduct proportional z-test on two cluster
-    :param df: data frame. in this case, contigency table generated from functions above
+    :param df: data frame. in this case, contingency table generated from functions above
     :param answer: string, column name
     :return: float, float. z-score and p-value.
     '''
@@ -258,7 +266,7 @@ def plotly_bar(df, color0, color1, title):
     :param color0: string. rgb or rgba color to represent one population
     :param color1: string. rgb or rgba color to represent another population
     :param title: chart title
-    :return: fig, to pass onto plotly
+    :return: fig, to run on plotly
     '''
     name1 = df.index[1]
     # first row of data frame

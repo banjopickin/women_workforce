@@ -95,7 +95,7 @@ class survey(object):
     def _flag_process(self):
         '''
         create dummie variables for bs strings, and replace dummie strings with big numbers
-        :return:
+        :return: none
         '''
         colis = ['sphrs1','age','agekdbrn','chldidel']
         for c in colis:
@@ -131,7 +131,7 @@ class survey(object):
         1. rough process
         2. impute impute columns
         3. impute par_impute_cols partially
-        4. concatenate with numeircal survey columns
+        4. concatenate with numerical survey columns
         5. feature engineering, combine maeduc, paeduc, speduc, and take average
         :raise:
         1. self.data: can be used for  EDA

@@ -14,7 +14,7 @@ class FeatureContribution(object):
         '''
 
         :param dir: feature contribution file directory
-        :return:
+        :return: none
         '''
         self.fc_df = pd.read_pickle(dir)
         self.features = [i for i in self.fc_df.columns if i not in ['correct','cluster']]
@@ -45,7 +45,7 @@ class FeatureContribution(object):
         '''
         1. pca
         2. kmeans
-        3. concatenate kmeans cluster id to orginal feature contribution dataframe
+        3. concatenate kmeans cluster id to original feature contribution data frame
         :param n_com: number of component
         :param n_cluster: number of cluster
         :return: pandas data frame
