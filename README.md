@@ -18,9 +18,9 @@ The [General Social Survy(GSS)](https://gssdataexplorer.norc.org/) is a sociolog
 
 To answer this question, first I had to know how women's employment statuses differed from men's.
 
-## result
+## Result
 
-### Employment
+### Employment Rates
 
 ![emp_sex](imgs/employ/emp_sex.png)
 
