@@ -2,8 +2,6 @@
 
 * [Big Picture Question](#big Picture Question)
 
-* [Employment](#employment)
-
 * [Result](#result)
 
 * [Method](#method)
@@ -20,7 +18,9 @@ The [General Social Survy(GSS)](https://gssdataexplorer.norc.org/) is a sociolog
 
 To answer this question, first I had to know how women's employment statuses differed from men's.
 
-## Employment
+## result
+
+### Employment
 
 ![emp_sex](imgs/employ/emp_sex.png)
 
@@ -35,8 +35,6 @@ In past two decades, women's employment rates were lower than men's, and the sam
 ![family](imgs/readme_figs/family.png)
 
 After finding that women with children under 13 are the most likely to leave the workforce, I then focused on using the survey data to answer these two questions : First, of the women with children under 13, which are more likely to work, and secondly what motivates them to work?
-
-## Result
 
 According to what the random forest model suggests, women with children under thirteen years old fall into six categories. Three subsets are employed and three are not.
 
