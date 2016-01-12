@@ -1,9 +1,5 @@
 #  Women in the Workforce
 
-**Data Source**
-
-The [General Social Survy(GSS)](https://gssdataexplorer.norc.org/) is a sociological survey which monitors demographic attitudes and living conditions of residents of the United States. The entire data is accessible to the public and is one of the most commonly used data source in social science studies.
-
 * [Big Picture Question](#big Picture Question)
 
 * [Employment](#employment)
@@ -17,6 +13,10 @@ The [General Social Survy(GSS)](https://gssdataexplorer.norc.org/) is a sociolog
 ## Big Picture Question
 
 **What factors influenced women's working statuses in United States in the past two decades?**
+
+**Data Source**
+
+The [General Social Survy(GSS)](https://gssdataexplorer.norc.org/) is a sociological survey which monitors demographic attitudes and living conditions of residents of the United States. The entire data is accessible to the public and is one of the most commonly used data source in social science studies.
 
 To answer this question, first I had to know how women's employment statuses differed from men's.
 
