@@ -6,14 +6,13 @@ The [General Social Survy(GSS)](https://gssdataexplorer.norc.org/) is a sociolog
 
 ## Big Picture Question
 
-**What factors influenced women's working statuses is United States in the past two decades?**
+**What factors influenced women's working statuses in United States in the past two decades?**
 
 To answer this question, first I had to know how women's employment statuses differed from men's.
 
 ## Employment
 
-![emp_sex](imgs/readme_figs/emp_sex.png)
-
+![emp_sex](imgs/employ/emp_sex.png)
 
 | Sex   | Employed | Unemployed |  Sum  | p-value |
 | ----- | ------   | -----      | ----- | ------  |
@@ -21,7 +20,7 @@ To answer this question, first I had to know how women's employment statuses dif
 | Women  | 9416    | 4404       | 13820 |         |
 | **sum**  | 18706 | 5902       | 24608 | 0.0     |
 
-In past two decades, women's emplyment rates were lower than men's, and a sample proportion z-test result showed this difference is significant.  I wanted to see how women's employment statuses were affected by their family statuses.
+In past two decades, women's employment rates were lower than men's, and the sample proportion z-test result showed this difference is significant. Next, I wanted to see how women's employment statuses were affected by their family statuses.
 
 ![family](imgs/readme_figs/family.png)
 
@@ -41,7 +40,7 @@ Women in this category are more likely to have grew up in a low-income family, t
 
 **Category Two**
 
-The highest degree earned is more likely to only be high school and they have either never married or are separated or divorced - essentially, single moms. To raise the children and support their family, they choose to work.
+In this category, women are more likely to only have a high school diploma; never have been married; or are separated or divorced. Essentially, they are single moms. To raise the children and support their family, they choose to work.
 
 **Category Three**
 
@@ -53,7 +52,7 @@ Women with children under thirteen years old who leave the work force fall into 
 
 **Category Four**
 
-Women in this category are more likely to have children early, grow up in low-income familiesm abd their highest education is less than high school.
+Women in this category are more likely to have children early, grow up in low-income families, and their highest education is less than high school.
 
 **Category Five**
 
