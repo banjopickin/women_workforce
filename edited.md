@@ -4,9 +4,9 @@
 
 The [General Social Survy(GSS)](https://gssdataexplorer.norc.org/) is a sociological survey which monitors demographic attitudes and living conditions of residents of the United States. The entire data is accessible to the public and is one of the most commonly used data source in social science studies.
 
-* [Big Picture Question](#Big Picture Question)
+* [Big Picture Question](#big Picture Question)
 
-* [employment](#Employment)
+* [employment](#employment)
 
 
 ## Big Picture Question
