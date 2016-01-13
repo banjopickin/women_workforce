@@ -34,6 +34,14 @@ In past two decades, women's employment rates were lower than men's, and the sam
 
 ![family](imgs/readme_figs/family.png)
 
+|             | Unemployed | Employed | p-value |
+| ---------   | ------   | -----      | ------  |
+| No Baby     | 3340     | 7781       |         |
+| Has Baby    | 1064     | 1535       | 0.0     |
+| No Preteen  | 3368     | 7401       |         |
+| Has Preteen | 1036     | 2015       | 0.0     |
+
+
 After finding that women with children under 13 are the most likely to leave the workforce, I then focused on using the survey data to answer these two questions : First, of the women with children under 13, which are more likely to work, and secondly what motivates them to work?
 
 According to what the random forest model suggests, women with children under thirteen years old fall into six categories. Three subsets are employed and three are not.
@@ -70,6 +78,7 @@ Women in this category are more likely to have high school degrees, consider the
 
 Women in this category are more likely to be raised in rich families. Their spouses work about 50 hours a week. They tend to be more conservative and religious.
 
+In conclusion, women's highest earned degree, spouse's working hours, family's socioeconomic background and the age when having first child are the key factors to determine women's employment status. 
 
 ## Method
 
@@ -118,6 +127,8 @@ After PCA and Kmeans, each row has a cluster id indicating which cluster it belo
 Since the feature Contribution matrix shares the same structure as the survey data frame, whose rows are the respondents and columns are the survey questions, we can concatenate by cluster id to the survey data frame. This new survey data set is saved as df_id.
 
 Each cluster is compared with the rest of the population using a sample proportion z-test.  
+
+** The presentation slideshow is accessable [here](http://slides.com/yihualeng/deck/live#/).  **
 
 ## Reference
 
